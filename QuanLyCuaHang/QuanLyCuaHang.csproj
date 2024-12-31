@@ -120,6 +120,48 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLiDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLiDonHang.Designer.cs">
+      <DependentUpon>QuanLiDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiNguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLiNguoiDung.Designer.cs">
+      <DependentUpon>QuanLiNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiSanPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLiSanPham.Designer.cs">
+      <DependentUpon>QuanLiSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLiThanhToan.Designer.cs">
+      <DependentUpon>QuanLiThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiBaoCaoDoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLiBaoCaoDoanhThu.Designer.cs">
+      <DependentUpon>QuanLiBaoCaoDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiPhanHoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLiPhanHoi.Designer.cs">
+      <DependentUpon>QuanLiPhanHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiVanChuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLiVanChuyen.Designer.cs">
+      <DependentUpon>QuanLiVanChuyen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormDangKy.resx">
       <DependentUpon>FormDangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +180,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLiNguoiDung.resx">
+      <DependentUpon>QuanLiNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiSanPham.resx">
+      <DependentUpon>QuanLiSanPham.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

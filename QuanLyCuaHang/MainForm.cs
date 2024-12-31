@@ -18,27 +18,68 @@ namespace QuanLyCuaHang
         public MainForm(string Id)
         {
             seller.id =Convert.ToInt32(Id);
+            seller.Load_Seller();
+            Phan_Quyen();
             InitializeComponent();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //HIển thị bảng quản lí người dùng
-            Connection connection = new Connection();
-            string query = "Select * from nguoiban";
-            DataTable data = new DataTable();
-            data = connection.ExcuteQuery(query);
-            DtgV_QLND.RowHeadersVisible = false;
-            DtgV_QLND.DataSource = data;
             // HIển thị bảng quản lí sản phẩm.
+            Connection connection = new Connection();
             string query1 = $"Select * from sanpham where Manguoiban = '{seller.id}'";
             DataTable data1 = new DataTable();
             data1 = connection.ExcuteQuery(query1);
             Dtvg_QLSP.RowHeadersVisible = false;
             Dtvg_QLSP.DataSource = data1;
+            //HIển thị bảng quản lí người dùng
+            
+            string query = "Select * from nguoiban";
+            DataTable data = new DataTable();
+            data = connection.ExcuteQuery(query);
+            DtgV_QLND.RowHeadersVisible = false;
+            DtgV_QLND.DataSource = data;
+
         }
 
         private void DtgV_QLND_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        public void Phan_Quyen()
+        {
+            if (seller.QuyenTruyCap == "User")
+            {
+                
+
+            }
+            else {
+                
+            }
+                    
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Add_QLND_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Edit_QLND_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Delete_QLND_Click(object sender, EventArgs e)
         {
 
         }

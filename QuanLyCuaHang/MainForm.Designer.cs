@@ -83,6 +83,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Quản lý người dùng";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // btn_Delete_QLND
             // 
@@ -92,6 +93,7 @@
             this.btn_Delete_QLND.TabIndex = 5;
             this.btn_Delete_QLND.Text = "Xóa";
             this.btn_Delete_QLND.UseVisualStyleBackColor = true;
+            this.btn_Delete_QLND.Click += new System.EventHandler(this.btn_Delete_QLND_Click);
             // 
             // btn_Edit_QLND
             // 
@@ -101,6 +103,7 @@
             this.btn_Edit_QLND.TabIndex = 4;
             this.btn_Edit_QLND.Text = "Sửa";
             this.btn_Edit_QLND.UseVisualStyleBackColor = true;
+            this.btn_Edit_QLND.Click += new System.EventHandler(this.btn_Edit_QLND_Click);
             // 
             // DtgV_QLND
             // 
@@ -121,6 +124,7 @@
             this.lb_1.Size = new System.Drawing.Size(158, 20);
             this.lb_1.TabIndex = 0;
             this.lb_1.Text = "Thông tin người dùng";
+            this.lb_1.Click += new System.EventHandler(this.lb_1_Click);
             // 
             // btn_Add_QLND
             // 
@@ -130,6 +134,7 @@
             this.btn_Add_QLND.TabIndex = 3;
             this.btn_Add_QLND.Text = "Thêm";
             this.btn_Add_QLND.UseVisualStyleBackColor = true;
+            this.btn_Add_QLND.Click += new System.EventHandler(this.btn_Add_QLND_Click);
             // 
             // tabPage2
             // 

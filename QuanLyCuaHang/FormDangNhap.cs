@@ -18,9 +18,7 @@
         private void btnLogIn_Click_1(object sender, EventArgs e)
         {
 
-            if (tB_TaiKhoan.Text == "admin" && tB_MatKhau.Text == "admin")
-            {
-                if (Seller.SignIn(tB_TaiKhoan.Text, tB_MatKhau.Text))
+             if (Seller.SignIn(tB_TaiKhoan.Text, tB_MatKhau.Text))
                 {
                     this.Hide();
                     MainForm mainForm = new MainForm(tB_TaiKhoan.Text);
@@ -30,7 +28,7 @@
 
                     this.Show();
                 }
-            }
+            
      
         }
 

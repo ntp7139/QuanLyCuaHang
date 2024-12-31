@@ -56,21 +56,26 @@ namespace QuanLyCuaHang
         private string soDienThoai;
         private string diaChi;
         private DateTime ngayThamGia;
-        public void Load_Seller(string ID)
+        public string QuyenTruyCap;
+        public void Load_Seller()
         {
             Connection connection = new Connection();
-            string query = $"Select * from nguoiban where manguoiban = '{ID}'";
+            string query = $"Select * from nguoiban where manguoiban = '{id.ToString()}'";
             DataTable dataTable = new DataTable();
             dataTable = connection.ExcuteQuery(query);
             DataRow dataRow = dataTable.Rows[0];
             this.id = Convert.ToInt32(dataRow["Manguoiban"]);
             this.ten = dataRow["Tennguoiban"].ToString();
             this.email = dataRow["Email"].ToString();
-            //this.soDienThoai = dataRow[]
+            this.soDienThoai = dataRow["SoDienThoai"].ToString();
+            this.diaChi = dataRow["DiaChi"].ToString();
+            this.ngayThamGia = (DateTime)dataRow["NgayThamGia"];
+            this.QuyenTruyCap = dataRow["QuyenTruyCap"].ToString();
         }
         public bool SignIn(string Taikhoan,string Matkhau)
         {
             // Đăng nhập
+            
             Connection connection = new Connection();
             if (!connection.Check_ID_Sellers(Taikhoan))
             {
