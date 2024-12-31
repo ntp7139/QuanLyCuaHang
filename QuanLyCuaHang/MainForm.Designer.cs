@@ -36,16 +36,16 @@
             this.lb_1 = new System.Windows.Forms.Label();
             this.btn_Add_QLND = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.btn_Delete_QLSP = new System.Windows.Forms.Button();
             this.btn_Edit_QLSP = new System.Windows.Forms.Button();
             this.Dtvg_QLSP = new System.Windows.Forms.DataGridView();
             this.lb_2 = new System.Windows.Forms.Label();
             this.btn_add_QLSP = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tbC_AppQuanLi.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtgV_QLND)).BeginInit();
@@ -111,6 +111,7 @@
             this.DtgV_QLND.RowTemplate.Height = 25;
             this.DtgV_QLND.Size = new System.Drawing.Size(1027, 487);
             this.DtgV_QLND.TabIndex = 2;
+            this.DtgV_QLND.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgV_QLND_CellContentClick);
             // 
             // lb_1
             // 
@@ -142,6 +143,52 @@
             this.tabPage2.Size = new System.Drawing.Size(1073, 617);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quản lí sản phẩm ";
+            // 
+            // btn_Delete_QLSP
+            // 
+            this.btn_Delete_QLSP.Location = new System.Drawing.Point(511, 40);
+            this.btn_Delete_QLSP.Name = "btn_Delete_QLSP";
+            this.btn_Delete_QLSP.Size = new System.Drawing.Size(88, 29);
+            this.btn_Delete_QLSP.TabIndex = 10;
+            this.btn_Delete_QLSP.Text = "Xóa";
+            this.btn_Delete_QLSP.UseVisualStyleBackColor = true;
+            // 
+            // btn_Edit_QLSP
+            // 
+            this.btn_Edit_QLSP.Location = new System.Drawing.Point(381, 40);
+            this.btn_Edit_QLSP.Name = "btn_Edit_QLSP";
+            this.btn_Edit_QLSP.Size = new System.Drawing.Size(88, 29);
+            this.btn_Edit_QLSP.TabIndex = 9;
+            this.btn_Edit_QLSP.Text = "Sửa";
+            this.btn_Edit_QLSP.UseVisualStyleBackColor = true;
+            // 
+            // Dtvg_QLSP
+            // 
+            this.Dtvg_QLSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dtvg_QLSP.Location = new System.Drawing.Point(23, 90);
+            this.Dtvg_QLSP.Name = "Dtvg_QLSP";
+            this.Dtvg_QLSP.RowHeadersWidth = 62;
+            this.Dtvg_QLSP.RowTemplate.Height = 25;
+            this.Dtvg_QLSP.Size = new System.Drawing.Size(1027, 487);
+            this.Dtvg_QLSP.TabIndex = 7;
+            // 
+            // lb_2
+            // 
+            this.lb_2.AutoSize = true;
+            this.lb_2.Location = new System.Drawing.Point(41, 40);
+            this.lb_2.Name = "lb_2";
+            this.lb_2.Size = new System.Drawing.Size(149, 20);
+            this.lb_2.TabIndex = 6;
+            this.lb_2.Text = "Thông tin sản phẩm";
+            // 
+            // btn_add_QLSP
+            // 
+            this.btn_add_QLSP.Location = new System.Drawing.Point(253, 40);
+            this.btn_add_QLSP.Name = "btn_add_QLSP";
+            this.btn_add_QLSP.Size = new System.Drawing.Size(88, 29);
+            this.btn_add_QLSP.TabIndex = 8;
+            this.btn_add_QLSP.Text = "Thêm";
+            this.btn_add_QLSP.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
@@ -191,60 +238,14 @@
             this.tabPage7.Text = "Quản lí báo cáo doanh thu";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // btn_Delete_QLSP
-            // 
-            this.btn_Delete_QLSP.Location = new System.Drawing.Point(511, 40);
-            this.btn_Delete_QLSP.Name = "btn_Delete_QLSP";
-            this.btn_Delete_QLSP.Size = new System.Drawing.Size(88, 29);
-            this.btn_Delete_QLSP.TabIndex = 10;
-            this.btn_Delete_QLSP.Text = "Xóa";
-            this.btn_Delete_QLSP.UseVisualStyleBackColor = true;
-            // 
-            // btn_Edit_QLSP
-            // 
-            this.btn_Edit_QLSP.Location = new System.Drawing.Point(381, 40);
-            this.btn_Edit_QLSP.Name = "btn_Edit_QLSP";
-            this.btn_Edit_QLSP.Size = new System.Drawing.Size(88, 29);
-            this.btn_Edit_QLSP.TabIndex = 9;
-            this.btn_Edit_QLSP.Text = "Sửa";
-            this.btn_Edit_QLSP.UseVisualStyleBackColor = true;
-            // 
-            // Dtvg_QLSP
-            // 
-            this.Dtvg_QLSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dtvg_QLSP.Location = new System.Drawing.Point(23, 90);
-            this.Dtvg_QLSP.Name = "Dtvg_QLSP";
-            this.Dtvg_QLSP.RowHeadersWidth = 62;
-            this.Dtvg_QLSP.RowTemplate.Height = 25;
-            this.Dtvg_QLSP.Size = new System.Drawing.Size(1027, 487);
-            this.Dtvg_QLSP.TabIndex = 7;
-            // 
-            // lb_2
-            // 
-            this.lb_2.AutoSize = true;
-            this.lb_2.Location = new System.Drawing.Point(41, 40);
-            this.lb_2.Name = "lb_2";
-            this.lb_2.Size = new System.Drawing.Size(149, 20);
-            this.lb_2.TabIndex = 6;
-            this.lb_2.Text = "Thông tin sản phẩm";
-            // 
-            // btn_add_QLSP
-            // 
-            this.btn_add_QLSP.Location = new System.Drawing.Point(253, 40);
-            this.btn_add_QLSP.Name = "btn_add_QLSP";
-            this.btn_add_QLSP.Size = new System.Drawing.Size(88, 29);
-            this.btn_add_QLSP.TabIndex = 8;
-            this.btn_add_QLSP.Text = "Thêm";
-            this.btn_add_QLSP.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 650);
             this.Controls.Add(this.tbC_AppQuanLi);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tbC_AppQuanLi.ResumeLayout(false);

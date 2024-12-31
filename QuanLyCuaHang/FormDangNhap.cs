@@ -17,13 +17,19 @@
 
         private void btnLogIn_Click_1(object sender, EventArgs e)
         {
-            
-            if (Seller.SignIn(tB_TaiKhoan.Text, tB_MatKhau.Text))
+
+            if (tB_TaiKhoan.Text == "admin" && tB_MatKhau.Text == "admin")
             {
-                this.Hide();
-                MainForm mainForm = new MainForm(tB_TaiKhoan.Text);
-                mainForm.ShowDialog();
-                this.Show();
+                if (Seller.SignIn(tB_TaiKhoan.Text, tB_MatKhau.Text))
+                {
+                    this.Hide();
+                    MainForm mainForm = new MainForm(tB_TaiKhoan.Text);
+                    mainForm.ShowDialog();
+                    tB_MatKhau.Clear();
+                    tB_TaiKhoan.Clear();
+
+                    this.Show();
+                }
             }
      
         }
