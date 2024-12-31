@@ -418,6 +418,7 @@
             // 
             this.tb_Ma_nguoiban_sua.Location = new System.Drawing.Point(149, 64);
             this.tb_Ma_nguoiban_sua.Name = "tb_Ma_nguoiban_sua";
+            this.tb_Ma_nguoiban_sua.ReadOnly = true;
             this.tb_Ma_nguoiban_sua.Size = new System.Drawing.Size(189, 26);
             this.tb_Ma_nguoiban_sua.TabIndex = 3;
             this.tb_Ma_nguoiban_sua.Visible = false;

@@ -181,6 +181,9 @@ namespace QuanLyCuaHang
         private int soLuongTon;
         private string hinhAnh;
 
+        public SanPham() 
+        { 
+        }
         public void AddNewProduct()
         {
             // Thêm sản phẩm mới

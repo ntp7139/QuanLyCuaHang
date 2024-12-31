@@ -127,7 +127,8 @@ namespace QuanLyCuaHang
         private void btn_Sua_Click(object sender, EventArgs e)
         {
             Connection connection = new Connection();
-            
+            string query = $"Update sanpham" +
+                           $"set tensanpham ='{tb_ten_sanphamsua.Text}', mota = '{tb_mota_sua.Text}',gia='{tb_gia_sua}','";
         }
     }
 }
