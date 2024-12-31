@@ -40,7 +40,7 @@
             this.DtgV_QLTT.Name = "DtgV_QLTT";
             this.DtgV_QLTT.RowHeadersWidth = 62;
             this.DtgV_QLTT.RowTemplate.Height = 25;
-            this.DtgV_QLTT.Size = new System.Drawing.Size(654, 487);
+            this.DtgV_QLTT.Size = new System.Drawing.Size(631, 487);
             this.DtgV_QLTT.TabIndex = 11;
             // 
             // lb_1

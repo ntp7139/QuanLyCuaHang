@@ -20,7 +20,7 @@ namespace QuanLyCuaHang
         private void QuanLiDonHang_Load(object sender, EventArgs e)
         {
             Connection connection = new Connection();
-            string query = "SELECT A.MaDonHang,A.MaKhachHang,B.MaSanPham,B.SoLuong,A.NgayDatHang,A.TrangThai,B.Gia \r\nFROM donhang as A join chitietdonhang as B\r\non A.MaDonHang = B.MaDonHang;";
+            string query = "SELECT A.MaDonHang,A.MaKhachHang,B.MaSanPham,B.SoLuong,A.NgayDatHang,A.TrangThai,B.Gia,B.Hinhthucthanhtoan,B.Donvivanchuyen \r\nFROM donhang as A join chitietdonhang as B\r\non A.MaDonHang = B.MaDonHang;";
             DataTable dt = connection.ExcuteQuery(query);
             DtgV_QLDH.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             DtgV_QLDH.RowHeadersVisible = false;

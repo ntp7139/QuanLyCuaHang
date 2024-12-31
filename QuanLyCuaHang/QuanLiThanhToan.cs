@@ -25,6 +25,7 @@ namespace QuanLyCuaHang
             DataTable data = new DataTable();
             data = connection.ExcuteQuery(query);
             DtgV_QLTT.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            
             DtgV_QLTT.RowHeadersVisible = false;
             DtgV_QLTT.DataSource = data;
         }
