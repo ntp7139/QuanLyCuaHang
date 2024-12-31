@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyCuaHang
 {
-    public partial class QuanLiVanChuyen : UserControl
+    public partial class QuanLiVanCHuyen : Form
     {
-        public QuanLiVanChuyen()
+        public QuanLiVanCHuyen()
         {
             InitializeComponent();
         }

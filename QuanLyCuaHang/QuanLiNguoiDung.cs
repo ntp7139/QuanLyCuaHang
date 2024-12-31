@@ -10,15 +10,21 @@ using System.Windows.Forms;
 
 namespace QuanLyCuaHang
 {
-    public partial class QuanLiNguoiDung : UserControl
+    public partial class QuanLiNguoiDung : Form
     {
         public QuanLiNguoiDung()
         {
             InitializeComponent();
         }
 
-        private void DtgV_QLND_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void QuanLiNguoiDung_Load(object sender, EventArgs e)
         {
+            Connection connection = new Connection();
+            string query = "Select * from nguoiban";
+            DataTable data = new DataTable();
+            data = connection.ExcuteQuery(query);
+            DtgV_QLND.RowHeadersVisible = false;
+            DtgV_QLND.DataSource = data;
 
         }
     }

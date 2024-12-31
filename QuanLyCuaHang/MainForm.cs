@@ -33,13 +33,7 @@ namespace QuanLyCuaHang
             Dtvg_QLSP.RowHeadersVisible = false;
             Dtvg_QLSP.DataSource = data1;
             //HIển thị bảng quản lí người dùng
-            
-            string query = "Select * from nguoiban";
-            DataTable data = new DataTable();
-            data = connection.ExcuteQuery(query);
-            DtgV_QLND.RowHeadersVisible = false;
-            DtgV_QLND.DataSource = data;
-
+           
         }
 
         private void DtgV_QLND_CellContentClick(object sender, DataGridViewCellEventArgs e)

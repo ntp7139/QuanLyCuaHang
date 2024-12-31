@@ -2,12 +2,12 @@
 {
     partial class QuanLiNguoiDung
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,10 +20,10 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -38,7 +38,7 @@
             // 
             // btn_Delete_QLND
             // 
-            this.btn_Delete_QLND.Location = new System.Drawing.Point(491, 51);
+            this.btn_Delete_QLND.Location = new System.Drawing.Point(500, 53);
             this.btn_Delete_QLND.Name = "btn_Delete_QLND";
             this.btn_Delete_QLND.Size = new System.Drawing.Size(88, 29);
             this.btn_Delete_QLND.TabIndex = 10;
@@ -47,7 +47,7 @@
             // 
             // btn_Edit_QLND
             // 
-            this.btn_Edit_QLND.Location = new System.Drawing.Point(361, 51);
+            this.btn_Edit_QLND.Location = new System.Drawing.Point(370, 53);
             this.btn_Edit_QLND.Name = "btn_Edit_QLND";
             this.btn_Edit_QLND.Size = new System.Drawing.Size(88, 29);
             this.btn_Edit_QLND.TabIndex = 9;
@@ -57,7 +57,7 @@
             // DtgV_QLND
             // 
             this.DtgV_QLND.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtgV_QLND.Location = new System.Drawing.Point(3, 101);
+            this.DtgV_QLND.Location = new System.Drawing.Point(12, 103);
             this.DtgV_QLND.Name = "DtgV_QLND";
             this.DtgV_QLND.RowHeadersWidth = 62;
             this.DtgV_QLND.RowTemplate.Height = 25;
@@ -67,7 +67,7 @@
             // lb_1
             // 
             this.lb_1.AutoSize = true;
-            this.lb_1.Location = new System.Drawing.Point(21, 51);
+            this.lb_1.Location = new System.Drawing.Point(30, 53);
             this.lb_1.Name = "lb_1";
             this.lb_1.Size = new System.Drawing.Size(158, 20);
             this.lb_1.TabIndex = 6;
@@ -75,7 +75,7 @@
             // 
             // btn_Add_QLND
             // 
-            this.btn_Add_QLND.Location = new System.Drawing.Point(233, 51);
+            this.btn_Add_QLND.Location = new System.Drawing.Point(242, 53);
             this.btn_Add_QLND.Name = "btn_Add_QLND";
             this.btn_Add_QLND.Size = new System.Drawing.Size(88, 29);
             this.btn_Add_QLND.TabIndex = 8;
@@ -86,13 +86,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1081, 650);
             this.Controls.Add(this.btn_Delete_QLND);
             this.Controls.Add(this.btn_Edit_QLND);
             this.Controls.Add(this.DtgV_QLND);
             this.Controls.Add(this.lb_1);
             this.Controls.Add(this.btn_Add_QLND);
             this.Name = "QuanLiNguoiDung";
-            this.ClientSize = new System.Drawing.Size(1081, 650);
+            this.Text = "QuanLiNguoiDung";
+            this.Load += new System.EventHandler(this.QuanLiNguoiDung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtgV_QLND)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

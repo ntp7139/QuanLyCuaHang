@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace QuanLyCuaHang
 {
-    public partial class QuanLiSanPham : UserControl
+    public partial class QuanLiSanPham : Form
     {
         public QuanLiSanPham()
         {
