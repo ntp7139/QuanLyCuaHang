@@ -27,6 +27,7 @@ namespace QuanLyCuaHang
             string query = $"Select * from sanpham where manguoiban = '{seller.id}'";
             DataTable dataTable = new DataTable();
             dataTable = connection.ExcuteQuery(query);
+            DtgV_QLSP.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             DtgV_QLSP.RowHeadersVisible = false;
             DtgV_QLSP.AutoGenerateColumns = true;
             DtgV_QLSP.DataSource = dataTable;  

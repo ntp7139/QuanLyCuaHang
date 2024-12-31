@@ -180,11 +180,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLiDonHang.resx">
+      <DependentUpon>QuanLiDonHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLiNguoiDung.resx">
       <DependentUpon>QuanLiNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiPhanHoi.resx">
+      <DependentUpon>QuanLiPhanHoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLiSanPham.resx">
       <DependentUpon>QuanLiSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiThanhToan.resx">
+      <DependentUpon>QuanLiThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiVanCHuyen.resx">
+      <DependentUpon>QuanLiVanCHuyen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -23,6 +23,7 @@ namespace QuanLyCuaHang
             string query = "Select * from nguoiban";
             DataTable data = new DataTable();
             data = connection.ExcuteQuery(query);
+            DtgV_QLND.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             DtgV_QLND.RowHeadersVisible = false;
             DtgV_QLND.DataSource = data;
 
@@ -61,10 +62,26 @@ namespace QuanLyCuaHang
 
             } else if(btn_Chucnang.Text == "Sửa")
             {
+                Connection connection = new Connection();
+                string query = $"update nguoiban " +
+                    $"set tennguoiban = '{tb_Tennguoiban.Text}',matkhau = '{tb_matkhau.Text}',email = '{tb_email.Text}'," +
+                    $"sodienthoai = '{tb_sodienthoai.Text}',diachi = '{tb_diachi.Text}' where manguoiban = '{tb_Manguoiban.Text}'";
+                connection.ExcuteNonQuery(query);   
+                QuanLiNguoiDung_Load(sender,e);
+                MessageBox.Show("Sửa thành công!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             } else if(btn_Chucnang.Text == "Xóa")
             {
-
+                Connection connection = new Connection();
+                string query = $"delete from nguoiban where manguoiban = '{tb_Manguoiban.Text}' ";
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa người dùng trên!", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (result == DialogResult.OK) 
+                {
+                    connection.ExcuteNonQuery(query);
+                    QuanLiNguoiDung_Load(sender, e);
+                    MessageBox.Show("Xóa thành công!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                }
+                   
             }
         }
 

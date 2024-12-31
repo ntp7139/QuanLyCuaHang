@@ -16,5 +16,17 @@ namespace QuanLyCuaHang
         {
             InitializeComponent();
         }
+
+        private void QuanLiThanhToan_Load(object sender, EventArgs e)
+        {
+
+            Connection connection = new Connection();
+            string query = "Select * from hinhthucthanhtoan";
+            DataTable data = new DataTable();
+            data = connection.ExcuteQuery(query);
+            DtgV_QLTT.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            DtgV_QLTT.RowHeadersVisible = false;
+            DtgV_QLTT.DataSource = data;
+        }
     }
 }

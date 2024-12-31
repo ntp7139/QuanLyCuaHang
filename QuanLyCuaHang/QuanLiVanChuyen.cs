@@ -16,5 +16,18 @@ namespace QuanLyCuaHang
         {
             InitializeComponent();
         }
+
+        private void QuanLiVanCHuyen_Load(object sender, EventArgs e)
+        {
+
+            Connection connection = new Connection();
+            string query = "Select * from donvivanchuyen";
+            DataTable data = new DataTable();
+            DtgV_QLVC.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            
+            data = connection.ExcuteQuery(query);
+            DtgV_QLVC.RowHeadersVisible = false;
+            DtgV_QLVC.DataSource = data;
+        }
     }
 }

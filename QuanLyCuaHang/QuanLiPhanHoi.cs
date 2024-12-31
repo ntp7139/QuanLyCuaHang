@@ -16,5 +16,15 @@ namespace QuanLyCuaHang
         {
             InitializeComponent();
         }
+
+        private void QuanLiPhanHoi_Load(object sender, EventArgs e)
+        {
+            Connection connection = new Connection();
+            string query = "Select * from tinnhan";
+            DataTable dt = connection.ExcuteQuery(query);
+            DtgV_QLPH.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            DtgV_QLPH.RowHeadersVisible = false;
+            DtgV_QLPH.DataSource = dt;
+        }
     }
 }

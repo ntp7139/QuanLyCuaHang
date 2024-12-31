@@ -28,13 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.components = new System.ComponentModel.Container();
+            this.DtgV_QLVC = new System.Windows.Forms.DataGridView();
+            this.lb_1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.DtgV_QLVC)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // DtgV_QLVC
+            // 
+            this.DtgV_QLVC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtgV_QLVC.Location = new System.Drawing.Point(41, 110);
+            this.DtgV_QLVC.Name = "DtgV_QLVC";
+            this.DtgV_QLVC.RowHeadersWidth = 62;
+            this.DtgV_QLVC.RowTemplate.Height = 25;
+            this.DtgV_QLVC.Size = new System.Drawing.Size(654, 487);
+            this.DtgV_QLVC.TabIndex = 11;
+            // 
+            // lb_1
+            // 
+            this.lb_1.AutoSize = true;
+            this.lb_1.Location = new System.Drawing.Point(59, 60);
+            this.lb_1.Name = "lb_1";
+            this.lb_1.Size = new System.Drawing.Size(93, 20);
+            this.lb_1.TabIndex = 10;
+            this.lb_1.Text = "Vận chuyển";
+            // 
+            // QuanLiVanCHuyen
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 650);
+            this.Controls.Add(this.DtgV_QLVC);
+            this.Controls.Add(this.lb_1);
+            this.Name = "QuanLiVanCHuyen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLiVanCHuyen";
+            this.Load += new System.EventHandler(this.QuanLiVanCHuyen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DtgV_QLVC)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView DtgV_QLVC;
+        private System.Windows.Forms.Label lb_1;
     }
 }
