@@ -14,6 +14,7 @@ namespace QuanLyCuaHang
 {
     public partial class FormDangKy : Form
     {
+        private NguoiBan seller = new NguoiBan();
         public FormDangKy()
         {
             InitializeComponent();
@@ -28,21 +29,10 @@ namespace QuanLyCuaHang
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            Connection connection = new Connection();
-            if (connection.Check_ID_Sellers(tb_TaiKhoan_DangKy.Text))
+            if(seller.Register(tb_name.Text,tb_TaiKhoan_DangKy.Text, tb_MatKhau_DangKy.Text, tb_NhapLaiMatKhau.Text, tb_Email_DangKy.Text))
             {
-                MessageBox.Show("Tài khoản đã tồn tại!","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Stop);
-            }
-            else
-            {
-                if(tb_MatKhau_DangKy.Text != tb_NhapLaiMatKhau.Text)
-                {
-                    MessageBox.Show("Mật khẩu không trùng khớp!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
-                }
-                else
-                {
-
-                }
+                MessageBox.Show("Bạn đã đnăg kí thành công!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                this.Close();
             }
         }
     }

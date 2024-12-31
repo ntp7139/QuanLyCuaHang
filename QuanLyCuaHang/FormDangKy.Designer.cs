@@ -54,11 +54,15 @@ namespace QuanLyCuaHang
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbAccount = new System.Windows.Forms.Label();
             this.lb_TieuDeDangKy = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tb_name = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pn_DangKy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_DangKy
@@ -67,6 +71,7 @@ namespace QuanLyCuaHang
             this.pn_DangKy.Controls.Add(this.pictureBox5);
             this.pn_DangKy.Controls.Add(this.pictureBox4);
             this.pn_DangKy.Controls.Add(this.pictureBox3);
+            this.pn_DangKy.Controls.Add(this.pictureBox2);
             this.pn_DangKy.Controls.Add(this.pictureBox1);
             this.pn_DangKy.Controls.Add(this.label1);
             this.pn_DangKy.Controls.Add(this.tb_NhapLaiMatKhau);
@@ -76,7 +81,9 @@ namespace QuanLyCuaHang
             this.pn_DangKy.Controls.Add(this.btnExit);
             this.pn_DangKy.Controls.Add(this.btnSignup);
             this.pn_DangKy.Controls.Add(this.tb_Email_DangKy);
+            this.pn_DangKy.Controls.Add(this.tb_name);
             this.pn_DangKy.Controls.Add(this.tb_TaiKhoan_DangKy);
+            this.pn_DangKy.Controls.Add(this.label2);
             this.pn_DangKy.Controls.Add(this.lbEmail);
             this.pn_DangKy.Controls.Add(this.lbAccount);
             this.pn_DangKy.Controls.Add(this.lb_TieuDeDangKy);
@@ -89,7 +96,7 @@ namespace QuanLyCuaHang
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(153, 368);
+            this.pictureBox5.Location = new System.Drawing.Point(172, 401);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 35);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -99,7 +106,7 @@ namespace QuanLyCuaHang
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(147, 290);
+            this.pictureBox4.Location = new System.Drawing.Point(166, 323);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(58, 35);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,7 +116,7 @@ namespace QuanLyCuaHang
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(147, 210);
+            this.pictureBox3.Location = new System.Drawing.Point(166, 243);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(58, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -119,7 +126,7 @@ namespace QuanLyCuaHang
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(150, 137);
+            this.pictureBox1.Location = new System.Drawing.Point(169, 170);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 35);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,7 +139,7 @@ namespace QuanLyCuaHang
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(179, 55);
+            this.label1.Location = new System.Drawing.Point(200, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(602, 31);
@@ -144,7 +151,7 @@ namespace QuanLyCuaHang
             // 
             this.tb_NhapLaiMatKhau.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tb_NhapLaiMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_NhapLaiMatKhau.Location = new System.Drawing.Point(216, 370);
+            this.tb_NhapLaiMatKhau.Location = new System.Drawing.Point(235, 403);
             this.tb_NhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(2);
             this.tb_NhapLaiMatKhau.Multiline = true;
             this.tb_NhapLaiMatKhau.Name = "tb_NhapLaiMatKhau";
@@ -156,7 +163,7 @@ namespace QuanLyCuaHang
             // 
             this.tb_MatKhau_DangKy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tb_MatKhau_DangKy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_MatKhau_DangKy.Location = new System.Drawing.Point(216, 292);
+            this.tb_MatKhau_DangKy.Location = new System.Drawing.Point(235, 325);
             this.tb_MatKhau_DangKy.Margin = new System.Windows.Forms.Padding(2);
             this.tb_MatKhau_DangKy.Multiline = true;
             this.tb_MatKhau_DangKy.Name = "tb_MatKhau_DangKy";
@@ -170,7 +177,7 @@ namespace QuanLyCuaHang
             this.lbConfirmPasswordl.Font = new System.Drawing.Font("Trebuchet MS", 9.5F, System.Drawing.FontStyle.Bold);
             this.lbConfirmPasswordl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbConfirmPasswordl.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lbConfirmPasswordl.Location = new System.Drawing.Point(91, 344);
+            this.lbConfirmPasswordl.Location = new System.Drawing.Point(110, 377);
             this.lbConfirmPasswordl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbConfirmPasswordl.Name = "lbConfirmPasswordl";
             this.lbConfirmPasswordl.Size = new System.Drawing.Size(266, 24);
@@ -183,7 +190,7 @@ namespace QuanLyCuaHang
             this.lbPassword.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbPassword.Font = new System.Drawing.Font("Trebuchet MS", 9.5F, System.Drawing.FontStyle.Bold);
             this.lbPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbPassword.Location = new System.Drawing.Point(126, 263);
+            this.lbPassword.Location = new System.Drawing.Point(145, 296);
             this.lbPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(119, 33);
@@ -225,7 +232,7 @@ namespace QuanLyCuaHang
             // 
             this.tb_Email_DangKy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tb_Email_DangKy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_Email_DangKy.Location = new System.Drawing.Point(216, 211);
+            this.tb_Email_DangKy.Location = new System.Drawing.Point(235, 244);
             this.tb_Email_DangKy.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Email_DangKy.Multiline = true;
             this.tb_Email_DangKy.Name = "tb_Email_DangKy";
@@ -236,7 +243,7 @@ namespace QuanLyCuaHang
             // 
             this.tb_TaiKhoan_DangKy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tb_TaiKhoan_DangKy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_TaiKhoan_DangKy.Location = new System.Drawing.Point(216, 137);
+            this.tb_TaiKhoan_DangKy.Location = new System.Drawing.Point(235, 170);
             this.tb_TaiKhoan_DangKy.Margin = new System.Windows.Forms.Padding(2);
             this.tb_TaiKhoan_DangKy.Multiline = true;
             this.tb_TaiKhoan_DangKy.Name = "tb_TaiKhoan_DangKy";
@@ -248,7 +255,7 @@ namespace QuanLyCuaHang
             this.lbEmail.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbEmail.Font = new System.Drawing.Font("Trebuchet MS", 9.5F, System.Drawing.FontStyle.Bold);
             this.lbEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbEmail.Location = new System.Drawing.Point(108, 181);
+            this.lbEmail.Location = new System.Drawing.Point(127, 214);
             this.lbEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(119, 34);
@@ -261,7 +268,7 @@ namespace QuanLyCuaHang
             this.lbAccount.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbAccount.Font = new System.Drawing.Font("Trebuchet MS", 9.5F, System.Drawing.FontStyle.Bold);
             this.lbAccount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbAccount.Location = new System.Drawing.Point(119, 106);
+            this.lbAccount.Location = new System.Drawing.Point(138, 139);
             this.lbAccount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbAccount.Name = "lbAccount";
             this.lbAccount.Size = new System.Drawing.Size(122, 37);
@@ -275,13 +282,47 @@ namespace QuanLyCuaHang
             this.lb_TieuDeDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lb_TieuDeDangKy.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_TieuDeDangKy.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lb_TieuDeDangKy.Location = new System.Drawing.Point(303, 10);
+            this.lb_TieuDeDangKy.Location = new System.Drawing.Point(272, 0);
             this.lb_TieuDeDangKy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_TieuDeDangKy.Name = "lb_TieuDeDangKy";
             this.lb_TieuDeDangKy.Size = new System.Drawing.Size(370, 48);
             this.lb_TieuDeDangKy.TabIndex = 7;
             this.lb_TieuDeDangKy.Text = "Create a new account";
             this.lb_TieuDeDangKy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.5F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(138, 71);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 37);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Name";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tb_name
+            // 
+            this.tb_name.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tb_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_name.Location = new System.Drawing.Point(235, 102);
+            this.tb_name.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_name.Multiline = true;
+            this.tb_name.Name = "tb_name";
+            this.tb_name.Size = new System.Drawing.Size(593, 35);
+            this.tb_name.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(169, 102);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
             // 
             // FormDangKy
             // 
@@ -298,6 +339,7 @@ namespace QuanLyCuaHang
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -321,5 +363,8 @@ namespace QuanLyCuaHang
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private TextBox tb_name;
+        private Label label2;
     }
 }

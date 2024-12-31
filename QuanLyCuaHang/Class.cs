@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using System;
 using System.Windows.Forms;
+using System.Data;
 
 namespace QuanLyCuaHang
 {
@@ -55,7 +56,18 @@ namespace QuanLyCuaHang
         private string soDienThoai;
         private string diaChi;
         private DateTime ngayThamGia;
-
+        public void Load_Seller(string ID)
+        {
+            Connection connection = new Connection();
+            string query = $"Select * from nguoiban where manguoiban = '{ID}'";
+            DataTable dataTable = new DataTable();
+            dataTable = connection.ExcuteQuery(query);
+            DataRow dataRow = dataTable.Rows[0];
+            this.id = Convert.ToInt32(dataRow["Manguoiban"]);
+            this.ten = dataRow["Tennguoiban"].ToString();
+            this.email = dataRow["Email"].ToString();
+            //this.soDienThoai = dataRow[]
+        }
         public bool SignIn(string Taikhoan,string Matkhau)
         {
             // Đăng nhập
@@ -85,9 +97,41 @@ namespace QuanLyCuaHang
             // Đăng xuất
         }
 
-        public void Register()
+        public bool Register(string Name,string ID,string Matkhau,string Matkhaucheck,string Email)
         {
             // Đăng ký tài khoản người bán
+            Connection connection = new Connection();
+            if (connection.Check_ID_Sellers(ID))
+            {
+                MessageBox.Show("Tài khoản đã tồn tại!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
+                return false;
+            }
+            else
+            {
+                if (Matkhau != Matkhaucheck)
+                {
+                    MessageBox.Show("Mật khẩu không trùng khớp!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
+                    return false;
+                }
+                else
+                {
+                    DateTime ngayHienTai = DateTime.Now;
+                    DateTime chiNgay = ngayHienTai.Date; // Lấy phần ngày, giờ sẽ là 00:00:00
+                    string ngayDinhDang = chiNgay.ToString("yyyy-MM-dd");
+                    string query = $"Insert into nguoiban(manguoiban,tennguoiban,matkhau,email,NgayThamGia) values('{ID}','{Name}','{Matkhau}','{Email}','{ngayDinhDang}')";
+                    try
+                    {
+                        connection.ExcuteNonQuery(query);
+                        return true;
+                    }
+                    catch (Exception ex) 
+                    {
+                        MessageBox.Show(ex.Message, "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                        return false;
+
+                    }
+                }
+            }
         }
 
         public void SearchProduct()

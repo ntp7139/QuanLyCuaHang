@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyCuaHang
 {
+   
     public partial class MainForm : Form
     {
-        public MainForm()
+        private NguoiBan seller = new NguoiBan();
+        public MainForm(string Id)
         {
             InitializeComponent();
         }

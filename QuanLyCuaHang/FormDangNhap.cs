@@ -21,7 +21,7 @@
             if (Seller.SignIn(tB_TaiKhoan.Text, tB_MatKhau.Text))
             {
                 this.Hide();
-                MainForm mainForm = new MainForm();
+                MainForm mainForm = new MainForm(tB_TaiKhoan.Text);
                 mainForm.ShowDialog();
                 this.Show();
             }
