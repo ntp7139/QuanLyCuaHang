@@ -25,14 +25,7 @@ namespace QuanLyCuaHang
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // HIển thị bảng quản lí sản phẩm.
-            Connection connection = new Connection();
-            string query1 = $"Select * from sanpham where Manguoiban = '{seller.id}'";
-            DataTable data1 = new DataTable();
-            data1 = connection.ExcuteQuery(query1);
-            Dtvg_QLSP.RowHeadersVisible = false;
-            Dtvg_QLSP.DataSource = data1;
-            //HIển thị bảng quản lí người dùng
+            
            
         }
 
@@ -76,6 +69,14 @@ namespace QuanLyCuaHang
         private void btn_Delete_QLND_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_QuanLiNguoiDung_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            QuanLiNguoiDung form = new QuanLiNguoiDung();
+            form.ShowDialog();
+            this.Show();
         }
     }
 }

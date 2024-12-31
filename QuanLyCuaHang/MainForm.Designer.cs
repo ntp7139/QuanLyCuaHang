@@ -28,259 +28,116 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbC_AppQuanLi = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btn_Delete_QLND = new System.Windows.Forms.Button();
-            this.btn_Edit_QLND = new System.Windows.Forms.Button();
-            this.DtgV_QLND = new System.Windows.Forms.DataGridView();
-            this.lb_1 = new System.Windows.Forms.Label();
-            this.btn_Add_QLND = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btn_Delete_QLSP = new System.Windows.Forms.Button();
-            this.btn_Edit_QLSP = new System.Windows.Forms.Button();
-            this.Dtvg_QLSP = new System.Windows.Forms.DataGridView();
-            this.lb_2 = new System.Windows.Forms.Label();
-            this.btn_add_QLSP = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tbC_AppQuanLi.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DtgV_QLND)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dtvg_QLSP)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.quảnLíSảnPhẩmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLíĐơnHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLíThanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLíVậnChuyểnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLíBáoCáoThốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLíPhảnHồiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_QuanLiNguoiDung = new System.Windows.Forms.Button();
+            this.btn_QuanliCuahang = new System.Windows.Forms.Button();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tbC_AppQuanLi
+            // contextMenuStrip1
             // 
-            this.tbC_AppQuanLi.Controls.Add(this.tabPage1);
-            this.tbC_AppQuanLi.Controls.Add(this.tabPage2);
-            this.tbC_AppQuanLi.Controls.Add(this.tabPage3);
-            this.tbC_AppQuanLi.Controls.Add(this.tabPage4);
-            this.tbC_AppQuanLi.Controls.Add(this.tabPage5);
-            this.tbC_AppQuanLi.Controls.Add(this.tabPage6);
-            this.tbC_AppQuanLi.Controls.Add(this.tabPage7);
-            this.tbC_AppQuanLi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbC_AppQuanLi.Location = new System.Drawing.Point(0, 0);
-            this.tbC_AppQuanLi.Name = "tbC_AppQuanLi";
-            this.tbC_AppQuanLi.SelectedIndex = 0;
-            this.tbC_AppQuanLi.Size = new System.Drawing.Size(1081, 650);
-            this.tbC_AppQuanLi.TabIndex = 0;
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quảnLíSảnPhẩmToolStripMenuItem,
+            this.quảnLíĐơnHàngToolStripMenuItem,
+            this.quảnLíThanhToánToolStripMenuItem,
+            this.quảnLíVậnChuyểnToolStripMenuItem,
+            this.quảnLíBáoCáoThốngKêToolStripMenuItem,
+            this.quảnLíPhảnHồiToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(286, 196);
             // 
-            // tabPage1
+            // quảnLíSảnPhẩmToolStripMenuItem
             // 
-            this.tabPage1.Controls.Add(this.btn_Delete_QLND);
-            this.tabPage1.Controls.Add(this.btn_Edit_QLND);
-            this.tabPage1.Controls.Add(this.DtgV_QLND);
-            this.tabPage1.Controls.Add(this.lb_1);
-            this.tabPage1.Controls.Add(this.btn_Add_QLND);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1073, 617);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Quản lý người dùng";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            this.quảnLíSảnPhẩmToolStripMenuItem.Name = "quảnLíSảnPhẩmToolStripMenuItem";
+            this.quảnLíSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(285, 32);
+            this.quảnLíSảnPhẩmToolStripMenuItem.Text = "Quản lí sản phẩm";
             // 
-            // btn_Delete_QLND
+            // quảnLíĐơnHàngToolStripMenuItem
             // 
-            this.btn_Delete_QLND.Location = new System.Drawing.Point(508, 50);
-            this.btn_Delete_QLND.Name = "btn_Delete_QLND";
-            this.btn_Delete_QLND.Size = new System.Drawing.Size(88, 29);
-            this.btn_Delete_QLND.TabIndex = 5;
-            this.btn_Delete_QLND.Text = "Xóa";
-            this.btn_Delete_QLND.UseVisualStyleBackColor = true;
-            this.btn_Delete_QLND.Click += new System.EventHandler(this.btn_Delete_QLND_Click);
+            this.quảnLíĐơnHàngToolStripMenuItem.Name = "quảnLíĐơnHàngToolStripMenuItem";
+            this.quảnLíĐơnHàngToolStripMenuItem.Size = new System.Drawing.Size(285, 32);
+            this.quảnLíĐơnHàngToolStripMenuItem.Text = "Quản lí đơn hàng";
             // 
-            // btn_Edit_QLND
+            // quảnLíThanhToánToolStripMenuItem
             // 
-            this.btn_Edit_QLND.Location = new System.Drawing.Point(378, 50);
-            this.btn_Edit_QLND.Name = "btn_Edit_QLND";
-            this.btn_Edit_QLND.Size = new System.Drawing.Size(88, 29);
-            this.btn_Edit_QLND.TabIndex = 4;
-            this.btn_Edit_QLND.Text = "Sửa";
-            this.btn_Edit_QLND.UseVisualStyleBackColor = true;
-            this.btn_Edit_QLND.Click += new System.EventHandler(this.btn_Edit_QLND_Click);
+            this.quảnLíThanhToánToolStripMenuItem.Name = "quảnLíThanhToánToolStripMenuItem";
+            this.quảnLíThanhToánToolStripMenuItem.Size = new System.Drawing.Size(285, 32);
+            this.quảnLíThanhToánToolStripMenuItem.Text = "Quản lí thanh toán";
             // 
-            // DtgV_QLND
+            // quảnLíVậnChuyểnToolStripMenuItem
             // 
-            this.DtgV_QLND.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtgV_QLND.Location = new System.Drawing.Point(20, 100);
-            this.DtgV_QLND.Name = "DtgV_QLND";
-            this.DtgV_QLND.RowHeadersWidth = 62;
-            this.DtgV_QLND.RowTemplate.Height = 25;
-            this.DtgV_QLND.Size = new System.Drawing.Size(1027, 487);
-            this.DtgV_QLND.TabIndex = 2;
-            this.DtgV_QLND.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgV_QLND_CellContentClick);
+            this.quảnLíVậnChuyểnToolStripMenuItem.Name = "quảnLíVậnChuyểnToolStripMenuItem";
+            this.quảnLíVậnChuyểnToolStripMenuItem.Size = new System.Drawing.Size(285, 32);
+            this.quảnLíVậnChuyểnToolStripMenuItem.Text = "Quản lí vận chuyển";
             // 
-            // lb_1
+            // quảnLíBáoCáoThốngKêToolStripMenuItem
             // 
-            this.lb_1.AutoSize = true;
-            this.lb_1.Location = new System.Drawing.Point(38, 50);
-            this.lb_1.Name = "lb_1";
-            this.lb_1.Size = new System.Drawing.Size(158, 20);
-            this.lb_1.TabIndex = 0;
-            this.lb_1.Text = "Thông tin người dùng";
-            this.lb_1.Click += new System.EventHandler(this.lb_1_Click);
+            this.quảnLíBáoCáoThốngKêToolStripMenuItem.Name = "quảnLíBáoCáoThốngKêToolStripMenuItem";
+            this.quảnLíBáoCáoThốngKêToolStripMenuItem.Size = new System.Drawing.Size(285, 32);
+            this.quảnLíBáoCáoThốngKêToolStripMenuItem.Text = "Quản lí báo cáo thống kê";
             // 
-            // btn_Add_QLND
+            // quảnLíPhảnHồiToolStripMenuItem
             // 
-            this.btn_Add_QLND.Location = new System.Drawing.Point(250, 50);
-            this.btn_Add_QLND.Name = "btn_Add_QLND";
-            this.btn_Add_QLND.Size = new System.Drawing.Size(88, 29);
-            this.btn_Add_QLND.TabIndex = 3;
-            this.btn_Add_QLND.Text = "Thêm";
-            this.btn_Add_QLND.UseVisualStyleBackColor = true;
-            this.btn_Add_QLND.Click += new System.EventHandler(this.btn_Add_QLND_Click);
+            this.quảnLíPhảnHồiToolStripMenuItem.Name = "quảnLíPhảnHồiToolStripMenuItem";
+            this.quảnLíPhảnHồiToolStripMenuItem.Size = new System.Drawing.Size(285, 32);
+            this.quảnLíPhảnHồiToolStripMenuItem.Text = "Quản lí phản hồi";
             // 
-            // tabPage2
+            // btn_QuanLiNguoiDung
             // 
-            this.tabPage2.Controls.Add(this.btn_Delete_QLSP);
-            this.tabPage2.Controls.Add(this.btn_Edit_QLSP);
-            this.tabPage2.Controls.Add(this.Dtvg_QLSP);
-            this.tabPage2.Controls.Add(this.lb_2);
-            this.tabPage2.Controls.Add(this.btn_add_QLSP);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1073, 617);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Quản lí sản phẩm ";
+            this.btn_QuanLiNguoiDung.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_QuanLiNguoiDung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_QuanLiNguoiDung.Location = new System.Drawing.Point(12, 9);
+            this.btn_QuanLiNguoiDung.Name = "btn_QuanLiNguoiDung";
+            this.btn_QuanLiNguoiDung.Size = new System.Drawing.Size(239, 40);
+            this.btn_QuanLiNguoiDung.TabIndex = 3;
+            this.btn_QuanLiNguoiDung.Text = "Quản lí người dùng";
+            this.btn_QuanLiNguoiDung.UseVisualStyleBackColor = false;
+            this.btn_QuanLiNguoiDung.Click += new System.EventHandler(this.btn_QuanLiNguoiDung_Click);
             // 
-            // btn_Delete_QLSP
+            // btn_QuanliCuahang
             // 
-            this.btn_Delete_QLSP.Location = new System.Drawing.Point(511, 40);
-            this.btn_Delete_QLSP.Name = "btn_Delete_QLSP";
-            this.btn_Delete_QLSP.Size = new System.Drawing.Size(88, 29);
-            this.btn_Delete_QLSP.TabIndex = 10;
-            this.btn_Delete_QLSP.Text = "Xóa";
-            this.btn_Delete_QLSP.UseVisualStyleBackColor = true;
-            // 
-            // btn_Edit_QLSP
-            // 
-            this.btn_Edit_QLSP.Location = new System.Drawing.Point(381, 40);
-            this.btn_Edit_QLSP.Name = "btn_Edit_QLSP";
-            this.btn_Edit_QLSP.Size = new System.Drawing.Size(88, 29);
-            this.btn_Edit_QLSP.TabIndex = 9;
-            this.btn_Edit_QLSP.Text = "Sửa";
-            this.btn_Edit_QLSP.UseVisualStyleBackColor = true;
-            // 
-            // Dtvg_QLSP
-            // 
-            this.Dtvg_QLSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dtvg_QLSP.Location = new System.Drawing.Point(23, 90);
-            this.Dtvg_QLSP.Name = "Dtvg_QLSP";
-            this.Dtvg_QLSP.RowHeadersWidth = 62;
-            this.Dtvg_QLSP.RowTemplate.Height = 25;
-            this.Dtvg_QLSP.Size = new System.Drawing.Size(1027, 487);
-            this.Dtvg_QLSP.TabIndex = 7;
-            // 
-            // lb_2
-            // 
-            this.lb_2.AutoSize = true;
-            this.lb_2.Location = new System.Drawing.Point(41, 40);
-            this.lb_2.Name = "lb_2";
-            this.lb_2.Size = new System.Drawing.Size(149, 20);
-            this.lb_2.TabIndex = 6;
-            this.lb_2.Text = "Thông tin sản phẩm";
-            // 
-            // btn_add_QLSP
-            // 
-            this.btn_add_QLSP.Location = new System.Drawing.Point(253, 40);
-            this.btn_add_QLSP.Name = "btn_add_QLSP";
-            this.btn_add_QLSP.Size = new System.Drawing.Size(88, 29);
-            this.btn_add_QLSP.TabIndex = 8;
-            this.btn_add_QLSP.Text = "Thêm";
-            this.btn_add_QLSP.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1073, 617);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Quản lí đơn hàng";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1073, 617);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Quản lí thanh toán";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1073, 617);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Quản lí phản hồi";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 29);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1073, 617);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Quản lí vận chuyển";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(4, 29);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1073, 617);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Quản lí báo cáo doanh thu";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            this.btn_QuanliCuahang.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_QuanliCuahang.ContextMenuStrip = this.contextMenuStrip1;
+            this.btn_QuanliCuahang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_QuanliCuahang.Location = new System.Drawing.Point(277, 9);
+            this.btn_QuanliCuahang.Name = "btn_QuanliCuahang";
+            this.btn_QuanliCuahang.Size = new System.Drawing.Size(239, 40);
+            this.btn_QuanliCuahang.TabIndex = 4;
+            this.btn_QuanliCuahang.Text = "Quản lí của hàng";
+            this.btn_QuanliCuahang.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 650);
-            this.Controls.Add(this.tbC_AppQuanLi);
+            this.Controls.Add(this.btn_QuanliCuahang);
+            this.Controls.Add(this.btn_QuanLiNguoiDung);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.tbC_AppQuanLi.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DtgV_QLND)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dtvg_QLSP)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
             }
-        private System.Windows.Forms.TabControl tbC_AppQuanLi;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label lb_1;
-        private System.Windows.Forms.DataGridView DtgV_QLND;
-        private System.Windows.Forms.Button btn_Add_QLND;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.Button btn_Delete_QLND;
-        private System.Windows.Forms.Button btn_Edit_QLND;
-        private System.Windows.Forms.Button btn_Delete_QLSP;
-        private System.Windows.Forms.Button btn_Edit_QLSP;
-        private System.Windows.Forms.DataGridView Dtvg_QLSP;
-        private System.Windows.Forms.Label lb_2;
-        private System.Windows.Forms.Button btn_add_QLSP;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem quảnLíSảnPhẩmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLíĐơnHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLíThanhToánToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLíVậnChuyểnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLíBáoCáoThốngKêToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLíPhảnHồiToolStripMenuItem;
+        private System.Windows.Forms.Button btn_QuanLiNguoiDung;
+        private System.Windows.Forms.Button btn_QuanliCuahang;
     }
 
     #endregion
