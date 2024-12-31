@@ -121,7 +121,15 @@ namespace QuanLyCuaHang
             return Check;
 
         }
-        
+        public bool Check_ID_SanPham(string ID)
+        {
+
+            string query = $"select * from sanpham where masanpham = '{ID}'";
+            bool Check = Check_Query(query);
+            return Check;
+
+        }
+
 
     }
 }
