@@ -67,9 +67,15 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tb_Masanpham_sua = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.pn_xóa = new System.Windows.Forms.Panel();
+            this.btn_thoat_xoa = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.tB_masanpham_xoa = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DtgV_QLSP)).BeginInit();
             this.pn_Them.SuspendLayout();
             this.pn_Sua.SuspendLayout();
+            this.pn_xóa.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Delete_QLND
@@ -139,7 +145,7 @@
             this.pn_Them.Controls.Add(this.label1);
             this.pn_Them.Controls.Add(this.tB_MaSanPham_Them);
             this.pn_Them.Controls.Add(this.lb_MaSP_Them);
-            this.pn_Them.Location = new System.Drawing.Point(177, 112);
+            this.pn_Them.Location = new System.Drawing.Point(674, 107);
             this.pn_Them.Name = "pn_Them";
             this.pn_Them.Size = new System.Drawing.Size(341, 482);
             this.pn_Them.TabIndex = 16;
@@ -297,7 +303,7 @@
             this.pn_Sua.Controls.Add(this.label12);
             this.pn_Sua.Controls.Add(this.tb_Masanpham_sua);
             this.pn_Sua.Controls.Add(this.label13);
-            this.pn_Sua.Location = new System.Drawing.Point(728, 85);
+            this.pn_Sua.Location = new System.Drawing.Point(647, 156);
             this.pn_Sua.Name = "pn_Sua";
             this.pn_Sua.Size = new System.Drawing.Size(341, 482);
             this.pn_Sua.TabIndex = 17;
@@ -450,12 +456,60 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Mã Sản Phẩm:";
             // 
+            // pn_xóa
+            // 
+            this.pn_xóa.Controls.Add(this.btn_thoat_xoa);
+            this.pn_xóa.Controls.Add(this.btn_xoa);
+            this.pn_xóa.Controls.Add(this.tB_masanpham_xoa);
+            this.pn_xóa.Controls.Add(this.label14);
+            this.pn_xóa.Location = new System.Drawing.Point(713, 45);
+            this.pn_xóa.Name = "pn_xóa";
+            this.pn_xóa.Size = new System.Drawing.Size(356, 236);
+            this.pn_xóa.TabIndex = 18;
+            // 
+            // btn_thoat_xoa
+            // 
+            this.btn_thoat_xoa.Location = new System.Drawing.Point(208, 116);
+            this.btn_thoat_xoa.Name = "btn_thoat_xoa";
+            this.btn_thoat_xoa.Size = new System.Drawing.Size(110, 62);
+            this.btn_thoat_xoa.TabIndex = 5;
+            this.btn_thoat_xoa.Text = "Thoát";
+            this.btn_thoat_xoa.UseVisualStyleBackColor = true;
+            this.btn_thoat_xoa.Click += new System.EventHandler(this.btn_thoat_xoa_Click);
+            // 
+            // btn_xoa
+            // 
+            this.btn_xoa.Location = new System.Drawing.Point(43, 116);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(110, 62);
+            this.btn_xoa.TabIndex = 4;
+            this.btn_xoa.Text = "Xóa";
+            this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
+            // 
+            // tB_masanpham_xoa
+            // 
+            this.tB_masanpham_xoa.Location = new System.Drawing.Point(149, 30);
+            this.tB_masanpham_xoa.Name = "tB_masanpham_xoa";
+            this.tB_masanpham_xoa.Size = new System.Drawing.Size(189, 26);
+            this.tB_masanpham_xoa.TabIndex = 3;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(23, 32);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(113, 20);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Mã Sản Phẩm:";
+            // 
             // QuanLiSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 650);
             this.Controls.Add(this.pn_Sua);
+            this.Controls.Add(this.pn_xóa);
             this.Controls.Add(this.pn_Them);
             this.Controls.Add(this.btn_Delete_QLND);
             this.Controls.Add(this.btn_Edit_QLND);
@@ -471,6 +525,8 @@
             this.pn_Them.PerformLayout();
             this.pn_Sua.ResumeLayout(false);
             this.pn_Sua.PerformLayout();
+            this.pn_xóa.ResumeLayout(false);
+            this.pn_xóa.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -517,5 +573,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox tb_Masanpham_sua;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel pn_xóa;
+        private System.Windows.Forms.Button btn_thoat_xoa;
+        private System.Windows.Forms.Button btn_xoa;
+        private System.Windows.Forms.TextBox tB_masanpham_xoa;
+        private System.Windows.Forms.Label label14;
     }
 }

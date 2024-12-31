@@ -181,22 +181,82 @@ namespace QuanLyCuaHang
         private int soLuongTon;
         private string hinhAnh;
 
-        public SanPham() 
+        public SanPham()
+        {
+            
+        }
+        public SanPham(int id,int idNguoiBan,string ten,string moTa,decimal Gia,int soluongTon,string Hinhanh)
+        {
+            this.id = id;
+            this.idNguoiBan = idNguoiBan;
+            this.ten = ten;
+            this.moTa = moTa;
+            this.gia = Gia;
+            this.soLuongTon = soluongTon;
+            this.hinhAnh = Hinhanh;
+
+        }
+        public void Load_SanPham(string ID) 
         { 
+            
+            Connection connection = new Connection();
+            string query = $"Select * from sanpham where masanpham = '{ID.ToString()}'";
+            DataTable dataTable = new DataTable();
+            dataTable = connection.ExcuteQuery(query);
+            DataRow dataRow = dataTable.Rows[0];
+            this.id = Convert.ToInt32(dataRow["Manguoiban"]);
+            this.ten = dataRow["Tensanpham"].ToString();
+            this.idNguoiBan =Convert.ToInt32( dataRow["Manguoiban"]);
+            this.moTa = dataRow["mota"].ToString();
+            this.gia = Convert.ToDecimal(dataRow["gia"]);
+            this.soLuongTon = Convert.ToInt32(dataRow["soluongton"]);
+            this.hinhAnh = dataRow["hinhanh"].ToString();
+
         }
         public void AddNewProduct()
         {
+
+
             // Thêm sản phẩm mới
+            Connection connection = new Connection();
+            if (!connection.Check_ID_SanPham(this.id.ToString()))
+            {
+                string query = $"insert into sanpham values('{this.id}','{this.idNguoiBan}','{this.ten}'" +
+                    $",'{this.moTa}','{this.gia}','{this.soLuongTon}','{this.hinhAnh}')";
+                connection.ExcuteNonQuery(query);
+            }
+            else
+            {
+                MessageBox.Show("Đã tồn tại mã sản phẩm!", "Thông báo!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
         }
 
         public void EditProduct()
         {
             // Chỉnh sửa sản phẩm
+            Connection connection = new Connection();
+            string query = $"Update sanpham " +
+                           $" set tensanpham ='{ten}', mota = '{moTa}',gia={gia},soluongton ={soLuongTon},hinhanh='{hinhAnh}'" +
+                           $" where masanpham = '{id}'";
+            connection.ExcuteNonQuery(query);
+            MessageBox.Show("Thay đổi thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
-        public void UpdateProduct()
+        public void DeleteProduct(string ID)
         {
-            // Cập nhật số lượng sản phẩm
+            // Xóa sản phẩm
+            Connection connection = new Connection();
+            if (!connection.Check_ID_SanPham(ID))
+            {
+                MessageBox.Show("Không tồn tại mã sản phẩm","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            {
+                string query = $"Delete from sanpham where masanpham = '{ID}'";
+                connection.ExcuteNonQuery(query);
+
+                MessageBox.Show("Xóa sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         public void Display()

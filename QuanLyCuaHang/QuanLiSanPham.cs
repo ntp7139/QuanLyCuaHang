@@ -13,6 +13,7 @@ namespace QuanLyCuaHang
     public partial class QuanLiSanPham : Form
     {
         private NguoiBan seller = new NguoiBan();
+        
         public QuanLiSanPham(int id)
         {
             seller.id = id;
@@ -44,7 +45,7 @@ namespace QuanLyCuaHang
 
         private void btn_Delete_QLND_Click(object sender, EventArgs e)
         {
-
+            pn_xóa.Visible = true;
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -61,27 +62,48 @@ namespace QuanLyCuaHang
         {
             pn_Them.Visible=false;
             
+            tB_Gia_Them.Clear();
+            tB_MaSanPham_Them.Clear();
+            tB_Manguoiban_Them.Clear();
+            Tb_tensanpham_Them.Clear();
+            tB_Mota_Them.Clear();
+            tB_Soluong_Them.Clear();
+            tB_LinkAnh_Them.Clear();
+            
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            Connection connection=new Connection();
-            if (!connection.Check_ID_SanPham(tB_MaSanPham_Them.Text))
-            {
-                string query = $"insert into sanpham values('{tB_MaSanPham_Them.Text}','{tB_Manguoiban_Them.Text}','{Tb_tensanpham_Them.Text}'" +
-                    $",'{tB_Mota_Them.Text}','{tB_Gia_Them.Text}','{tB_Soluong_Them.Text}','{tB_LinkAnh_Them.Text}')";
-                connection.ExcuteNonQuery(query);
-            }
-            else
-            {
-                MessageBox.Show("Đã tồn tại mã sản phẩm!","Thông báo!",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
-            }
+           SanPham sanpham = new SanPham(Convert.ToInt32(tB_MaSanPham_Them.Text), Convert.ToInt32(tB_Manguoiban_Them.Text),Tb_tensanpham_Them.Text,tB_Mota_Them.Text,Convert.ToDecimal(tB_Gia_Them.Text),Convert.ToInt32(tB_Soluong_Them.Text),tB_LinkAnh_Them.Text);
+                        
+            sanpham.AddNewProduct();
             QuanLiSanPham_Load(sender, e);
         }
 
         private void btn_Thoat_Sua_Click(object sender, EventArgs e)
         {
             pn_Sua.Visible =false;
+            btn_Sua.Enabled = false;
+            label7.Visible = false;
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
+            label11.Visible = false;
+            label12.Visible = false;
+            label13.Visible = false;
+            tb_soluongton_sua.Visible = false;
+            tb_gia_sua.Visible = false;
+            tb_linkanh_sua.Visible = false;
+            tb_Ma_nguoiban_sua.Visible = false;
+            tb_mota_sua.Visible = false;
+            tb_ten_sanphamsua.Visible = false;
+            tb_soluongton_sua.Clear();
+            tb_gia_sua.Clear();
+            tb_linkanh_sua.Clear();
+            tb_Ma_nguoiban_sua.Clear();
+            tb_mota_sua.Clear();
+            tb_ten_sanphamsua.Clear();
+
         }
         private void text_Sua(object sender, KeyEventArgs e)
         {
@@ -126,9 +148,22 @@ namespace QuanLyCuaHang
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            Connection connection = new Connection();
-            string query = $"Update sanpham" +
-                           $"set tensanpham ='{tb_ten_sanphamsua.Text}', mota = '{tb_mota_sua.Text}',gia='{tb_gia_sua}','";
+            SanPham sanpham = new SanPham(Convert.ToInt32(tb_Masanpham_sua.Text), Convert.ToInt32(tb_Ma_nguoiban_sua.Text), tb_ten_sanphamsua.Text, tb_mota_sua.Text, Convert.ToDecimal(tb_gia_sua.Text), Convert.ToInt32(tb_soluongton_sua.Text), tb_linkanh_sua.Text);
+            sanpham.EditProduct();
+            QuanLiSanPham_Load(sender, e);
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            SanPham sanpham = new SanPham();
+            sanpham.DeleteProduct(tB_masanpham_xoa.Text);
+            QuanLiSanPham_Load(sender, e);
+        }
+
+        private void btn_thoat_xoa_Click(object sender, EventArgs e)
+        {
+            pn_xóa.Visible = false;
+            tB_masanpham_xoa.Clear();
         }
     }
 }
