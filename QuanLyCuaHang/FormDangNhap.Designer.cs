@@ -35,239 +35,224 @@ namespace QuanLyCuaHang
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            tabPage2 = new TabPage();
-            tabPage1 = new TabPage();
-            pn_DangNhap = new Panel();
-            lbExit = new Label();
-            btnSignUp = new Button();
-            label3 = new Label();
-            label2 = new Label();
-            lbWelcomeBack = new Label();
-            lbChangePassword = new Label();
-            btnLogIn = new Button();
-            tB_MatKhau = new TextBox();
-            lbPassword = new Label();
-            lbAccount = new Label();
-            tB_TaiKhoan = new TextBox();
-            pictureBox1 = new PictureBox();
-            tCt_FormDangNhap = new TabControl();
-            pn_DangNhap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pn_DangNhap = new System.Windows.Forms.Panel();
+            this.lbExit = new System.Windows.Forms.Label();
+            this.btnSignUp = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbWelcomeBack = new System.Windows.Forms.Label();
+            this.btnLogIn = new System.Windows.Forms.Button();
+            this.tB_MatKhau = new System.Windows.Forms.TextBox();
+            this.lbPassword = new System.Windows.Forms.Label();
+            this.lbAccount = new System.Windows.Forms.Label();
+            this.tB_TaiKhoan = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tCt_FormDangNhap = new System.Windows.Forms.TabControl();
+            this.pn_DangNhap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
             // 
             // button2
             // 
-            button2.Location = new Point(0, 0);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 0;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 0;
             // 
             // tabPage2
             // 
-            tabPage2.Location = new Point(4, 34);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(793, 413);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPage2";
-            tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(793, 413);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
-            tabPage1.Location = new Point(4, 34);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(793, 413);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "tabPage1";
-            tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(793, 413);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // pn_DangNhap
             // 
-            pn_DangNhap.BackColor = SystemColors.ButtonHighlight;
-            pn_DangNhap.Controls.Add(lbExit);
-            pn_DangNhap.Controls.Add(btnSignUp);
-            pn_DangNhap.Controls.Add(label3);
-            pn_DangNhap.Controls.Add(label2);
-            pn_DangNhap.Controls.Add(lbWelcomeBack);
-            pn_DangNhap.Controls.Add(lbChangePassword);
-            pn_DangNhap.Controls.Add(btnLogIn);
-            pn_DangNhap.Controls.Add(tB_MatKhau);
-            pn_DangNhap.Controls.Add(lbPassword);
-            pn_DangNhap.Controls.Add(lbAccount);
-            pn_DangNhap.Controls.Add(tB_TaiKhoan);
-            pn_DangNhap.Controls.Add(pictureBox1);
-            pn_DangNhap.Dock = DockStyle.Fill;
-            pn_DangNhap.Location = new Point(0, 0);
-            pn_DangNhap.Margin = new Padding(2);
-            pn_DangNhap.Name = "pn_DangNhap";
-            pn_DangNhap.Size = new Size(800, 500);
-            pn_DangNhap.TabIndex = 9;
-            pn_DangNhap.Paint += pn_DangNhap_Paint;
+            this.pn_DangNhap.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pn_DangNhap.Controls.Add(this.lbExit);
+            this.pn_DangNhap.Controls.Add(this.btnSignUp);
+            this.pn_DangNhap.Controls.Add(this.label3);
+            this.pn_DangNhap.Controls.Add(this.label2);
+            this.pn_DangNhap.Controls.Add(this.lbWelcomeBack);
+            this.pn_DangNhap.Controls.Add(this.btnLogIn);
+            this.pn_DangNhap.Controls.Add(this.tB_MatKhau);
+            this.pn_DangNhap.Controls.Add(this.lbPassword);
+            this.pn_DangNhap.Controls.Add(this.lbAccount);
+            this.pn_DangNhap.Controls.Add(this.tB_TaiKhoan);
+            this.pn_DangNhap.Controls.Add(this.pictureBox1);
+            this.pn_DangNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pn_DangNhap.Location = new System.Drawing.Point(0, 0);
+            this.pn_DangNhap.Margin = new System.Windows.Forms.Padding(2);
+            this.pn_DangNhap.Name = "pn_DangNhap";
+            this.pn_DangNhap.Size = new System.Drawing.Size(900, 500);
+            this.pn_DangNhap.TabIndex = 9;
             // 
             // lbExit
             // 
-            lbExit.AutoSize = true;
-            lbExit.Font = new Font("Trebuchet MS", 8F, FontStyle.Italic | FontStyle.Underline);
-            lbExit.Location = new Point(671, 456);
-            lbExit.Margin = new Padding(2, 0, 2, 0);
-            lbExit.Name = "lbExit";
-            lbExit.Size = new Size(33, 18);
-            lbExit.TabIndex = 5;
-            lbExit.Text = "Exit";
-            lbExit.Click += lbExit_Click;
+            this.lbExit.AutoSize = true;
+            this.lbExit.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))));
+            this.lbExit.Location = new System.Drawing.Point(662, 460);
+            this.lbExit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbExit.Name = "lbExit";
+            this.lbExit.Size = new System.Drawing.Size(39, 22);
+            this.lbExit.TabIndex = 5;
+            this.lbExit.Text = "Exit";
+            this.lbExit.Click += new System.EventHandler(this.lbExit_Click);
             // 
             // btnSignUp
             // 
-            btnSignUp.BackColor = Color.SteelBlue;
-            btnSignUp.Font = new Font("Trebuchet MS", 9.5F, FontStyle.Bold);
-            btnSignUp.ForeColor = SystemColors.ButtonHighlight;
-            btnSignUp.Location = new Point(478, 395);
-            btnSignUp.Name = "btnSignUp";
-            btnSignUp.Size = new Size(269, 35);
-            btnSignUp.TabIndex = 3;
-            btnSignUp.Text = "Sign up";
-            btnSignUp.UseVisualStyleBackColor = false;
-            btnSignUp.Click += btnSignUp_Click;
+            this.btnSignUp.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSignUp.Font = new System.Drawing.Font("Trebuchet MS", 9.5F, System.Drawing.FontStyle.Bold);
+            this.btnSignUp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSignUp.Location = new System.Drawing.Point(538, 395);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(303, 35);
+            this.btnSignUp.TabIndex = 3;
+            this.btnSignUp.Text = "Sign up";
+            this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ActiveBorder;
-            label3.Location = new Point(597, 370);
-            label3.Name = "label3";
-            label3.Size = new Size(23, 20);
-            label3.TabIndex = 13;
-            label3.Text = "or";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label3.Location = new System.Drawing.Point(672, 370);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 25);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "or";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Trebuchet MS", 9.5F, FontStyle.Bold);
-            label2.Location = new Point(462, 95);
-            label2.Name = "label2";
-            label2.Size = new Size(230, 22);
-            label2.TabIndex = 11;
-            label2.Text = "Please log in to your account";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.5F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(520, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(271, 24);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Please log in to your account";
             // 
             // lbWelcomeBack
             // 
-            lbWelcomeBack.Font = new Font("Gill Sans Ultra Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbWelcomeBack.ForeColor = Color.SteelBlue;
-            lbWelcomeBack.Location = new Point(462, 7);
-            lbWelcomeBack.Name = "lbWelcomeBack";
-            lbWelcomeBack.Size = new Size(240, 86);
-            lbWelcomeBack.TabIndex = 10;
-            lbWelcomeBack.Text = "Welcome Back!";
-            // 
-            // lbChangePassword
-            // 
-            lbChangePassword.AutoSize = true;
-            lbChangePassword.Font = new Font("Trebuchet MS", 8F, FontStyle.Italic | FontStyle.Underline);
-            lbChangePassword.Location = new Point(499, 457);
-            lbChangePassword.Margin = new Padding(2, 0, 2, 0);
-            lbChangePassword.Name = "lbChangePassword";
-            lbChangePassword.Size = new Size(117, 18);
-            lbChangePassword.TabIndex = 4;
-            lbChangePassword.Text = "Change Password";
-            lbChangePassword.Click += lbChangePassword_Click;
+            this.lbWelcomeBack.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWelcomeBack.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbWelcomeBack.Location = new System.Drawing.Point(520, 7);
+            this.lbWelcomeBack.Name = "lbWelcomeBack";
+            this.lbWelcomeBack.Size = new System.Drawing.Size(270, 86);
+            this.lbWelcomeBack.TabIndex = 10;
+            this.lbWelcomeBack.Text = "Welcome Back!";
             // 
             // btnLogIn
             // 
-            btnLogIn.BackColor = Color.SteelBlue;
-            btnLogIn.Font = new Font("Trebuchet MS", 9.5F, FontStyle.Bold);
-            btnLogIn.ForeColor = SystemColors.ButtonHighlight;
-            btnLogIn.Location = new Point(478, 335);
-            btnLogIn.Margin = new Padding(2);
-            btnLogIn.Name = "btnLogIn";
-            btnLogIn.Size = new Size(269, 35);
-            btnLogIn.TabIndex = 2;
-            btnLogIn.Text = "Log in";
-            btnLogIn.UseVisualStyleBackColor = false;
-            btnLogIn.Click += btnLogIn_Click;
+            this.btnLogIn.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLogIn.Font = new System.Drawing.Font("Trebuchet MS", 9.5F, System.Drawing.FontStyle.Bold);
+            this.btnLogIn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLogIn.Location = new System.Drawing.Point(538, 335);
+            this.btnLogIn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(303, 35);
+            this.btnLogIn.TabIndex = 2;
+            this.btnLogIn.Text = "Log in";
+            this.btnLogIn.UseVisualStyleBackColor = false;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click_1);
             // 
             // tB_MatKhau
             // 
-            tB_MatKhau.Location = new Point(464, 262);
-            tB_MatKhau.Margin = new Padding(2);
-            tB_MatKhau.Name = "tB_MatKhau";
-            tB_MatKhau.PasswordChar = '*';
-            tB_MatKhau.Size = new Size(294, 27);
-            tB_MatKhau.TabIndex = 1;
+            this.tB_MatKhau.Location = new System.Drawing.Point(522, 262);
+            this.tB_MatKhau.Margin = new System.Windows.Forms.Padding(2);
+            this.tB_MatKhau.Name = "tB_MatKhau";
+            this.tB_MatKhau.PasswordChar = '*';
+            this.tB_MatKhau.Size = new System.Drawing.Size(330, 26);
+            this.tB_MatKhau.TabIndex = 1;
             // 
             // lbPassword
             // 
-            lbPassword.AutoSize = true;
-            lbPassword.Font = new Font("Trebuchet MS", 9F, FontStyle.Bold);
-            lbPassword.Location = new Point(464, 238);
-            lbPassword.Margin = new Padding(2, 0, 2, 0);
-            lbPassword.Name = "lbPassword";
-            lbPassword.Size = new Size(72, 20);
-            lbPassword.TabIndex = 2;
-            lbPassword.Text = "Password";
+            this.lbPassword.AutoSize = true;
+            this.lbPassword.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.lbPassword.Location = new System.Drawing.Point(522, 238);
+            this.lbPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPassword.Name = "lbPassword";
+            this.lbPassword.Size = new System.Drawing.Size(88, 23);
+            this.lbPassword.TabIndex = 2;
+            this.lbPassword.Text = "Password";
             // 
             // lbAccount
             // 
-            lbAccount.AutoSize = true;
-            lbAccount.Font = new Font("Trebuchet MS", 9F, FontStyle.Bold);
-            lbAccount.Location = new Point(460, 150);
-            lbAccount.Margin = new Padding(2, 0, 2, 0);
-            lbAccount.Name = "lbAccount";
-            lbAccount.Size = new Size(67, 20);
-            lbAccount.TabIndex = 1;
-            lbAccount.Text = "Account";
+            this.lbAccount.AutoSize = true;
+            this.lbAccount.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.lbAccount.Location = new System.Drawing.Point(518, 150);
+            this.lbAccount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbAccount.Name = "lbAccount";
+            this.lbAccount.Size = new System.Drawing.Size(78, 23);
+            this.lbAccount.TabIndex = 1;
+            this.lbAccount.Text = "Account";
             // 
             // tB_TaiKhoan
             // 
-            tB_TaiKhoan.Location = new Point(461, 173);
-            tB_TaiKhoan.Margin = new Padding(2);
-            tB_TaiKhoan.Name = "tB_TaiKhoan";
-            tB_TaiKhoan.Size = new Size(297, 27);
-            tB_TaiKhoan.TabIndex = 0;
+            this.tB_TaiKhoan.Location = new System.Drawing.Point(519, 173);
+            this.tB_TaiKhoan.Margin = new System.Windows.Forms.Padding(2);
+            this.tB_TaiKhoan.Name = "tB_TaiKhoan";
+            this.tB_TaiKhoan.Size = new System.Drawing.Size(334, 26);
+            this.tB_TaiKhoan.TabIndex = 0;
             // 
             // pictureBox1
             // 
-           // pictureBox1.Image = Properties.Resources.anhbia1;
-            pictureBox1.Location = new Point(1, -1);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(444, 500);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 12;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Location = new System.Drawing.Point(1, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // tCt_FormDangNhap
             // 
-            tCt_FormDangNhap.Location = new Point(0, 0);
-            tCt_FormDangNhap.Name = "tCt_FormDangNhap";
-            tCt_FormDangNhap.SelectedIndex = 0;
-            tCt_FormDangNhap.Size = new Size(800, 500);
-            tCt_FormDangNhap.TabIndex = 0;
+            this.tCt_FormDangNhap.Location = new System.Drawing.Point(0, 0);
+            this.tCt_FormDangNhap.Name = "tCt_FormDangNhap";
+            this.tCt_FormDangNhap.SelectedIndex = 0;
+            this.tCt_FormDangNhap.Size = new System.Drawing.Size(800, 500);
+            this.tCt_FormDangNhap.TabIndex = 0;
             // 
             // FormDangNhap
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(800, 500);
-            this.Controls.Add(pn_DangNhap);
-            Margin = new Padding(2);
-            Name = "FormDangNhap";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Đăng Nhập";
-            pn_DangNhap.ResumeLayout(false);
-            pn_DangNhap.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(900, 500);
+            this.Controls.Add(this.pn_DangNhap);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "FormDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đăng Nhập";
+            this.pn_DangNhap.ResumeLayout(false);
+            this.pn_DangNhap.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -282,7 +267,6 @@ namespace QuanLyCuaHang
         private Label lbAccount;
         private TextBox tB_TaiKhoan;
         private TabControl tCt_FormDangNhap;
-        private Label lbChangePassword;
         private Label lbWelcomeBack;
         private PictureBox pictureBox1;
         private Label label2;

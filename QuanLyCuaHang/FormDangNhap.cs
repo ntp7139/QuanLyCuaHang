@@ -1,4 +1,4 @@
-namespace QuanLyCuaHang
+﻿namespace QuanLyCuaHang
 {
     using MySql.Data;
     using MySql.Data.MySqlClient;
@@ -9,65 +9,37 @@ namespace QuanLyCuaHang
    
     public partial class FormDangNhap : Form
     {
+        private NguoiBan Seller = new NguoiBan();
         public FormDangNhap()
         {
             InitializeComponent();
         }
 
-        
-        private void lb_QuenMatKhau_Click(object sender, EventArgs e)
+        private void btnLogIn_Click_1(object sender, EventArgs e)
         {
-        }
-
-        private void btn_Thoat_Click(object sender, EventArgs e)
-        {
-        }
-
-      
-        private void lb_Email_DangKy_Click(object sender, EventArgs e)
-        {
-        }
-
-       
-        private void lb_DangKy_Click(object sender, EventArgs e)
-        {
-        }
-
-        
-        private void btnLogIn_Click(object sender, EventArgs e)
-        {
-        }
-
-        
-        private void pn_DangNhap_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-       
-        public void FormDangNhap_Load(object sender, EventArgs e)
-        {
-        }
-
-       
-        private void lbChangePassword_Click(object sender, EventArgs e)
-        {
-        }
-
-      
-        private void lb_TieuDe_Click(object sender, EventArgs e)
-        {
+            
+            if (Seller.SignIn(tB_TaiKhoan.Text, tB_MatKhau.Text))
+            {
+                this.Hide();
+                MainForm mainForm = new MainForm();
+                mainForm.ShowDialog();
+                this.Show();
+            }
+     
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            FormDangKy form = new FormDangKy();
+            form.ShowDialog();
+            this.Show();
         }
 
-      
         private void lbExit_Click(object sender, EventArgs e)
         {
+            this.Close();
         }
-
-       
     }
 
 }

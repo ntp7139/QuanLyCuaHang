@@ -9,13 +9,12 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Math.Field;
 using System.Windows.Forms;
-
 namespace QuanLyCuaHang
 {
     internal class Connection 
     {
         //Connection tới  server 
-        private string connection =  "server=phatchison-phatbaoan112-1d4a.d.aivencloud.com;port = 28938;uid=avnadmin;pwd=AVNS_UF7t0kMFhSmIyxPG8M5;database=defaultdb";
+        private string connection =  "server=127.0.0.1;port = 3306;uid=root;pwd=phatbaoan112;database=facebooksalesmanagement";
         //Kết nối tới MySQL sever
         public MySqlConnection MySqlConnection(string connect)
         {
@@ -106,22 +105,23 @@ namespace QuanLyCuaHang
             }
             return result;
         }
-        public bool Check_ID_Player(string ID_Player)
+        public bool Check_ID_Sellers(string ID)
         {
             
-            string query  = $"Select * from nguoichoi where taikhoan ='{ID_Player}'";
+            string query  = $"select * from nguoiban where manguoiban = '{ID}'";
             bool Check = Check_Query(query);
             return Check;
 
         }
-        public bool Check_ID_Sudoku(string ID_Sudoku)
+        public bool Check_Sellers(string ID,string matkhau)
         {
-           
-            string query = $"Select * from lichsudau where game_id ='{ID_Sudoku}'";
+
+            string query = $"select * from nguoiban where manguoiban = '{ID}' and matkhau ='{matkhau}'";
             bool Check = Check_Query(query);
             return Check;
 
         }
+        
 
     }
 }
