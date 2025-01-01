@@ -210,7 +210,7 @@ namespace QuanLyCuaHang
                 body.Append(table);
 
                 // 3. Thông tin "Tổng tiền"
-                Paragraph totalParagraph = CreateParagraph($"Tổng tiền: {hoaDon.so_luong * hoaDon.Gia:C}", isBold: true);
+                Paragraph totalParagraph = CreateParagraph($"Tổng tiền: {hoaDon.Gia:C}", isBold: true);
                 totalParagraph.ParagraphProperties = new ParagraphProperties(new Justification { Val = JustificationValues.Right });
                 body.Append(totalParagraph);
 

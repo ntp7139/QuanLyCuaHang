@@ -63,6 +63,7 @@
             this.btn_Xuathoadon.TabIndex = 12;
             this.btn_Xuathoadon.Text = "Xuất hóa đơn";
             this.btn_Xuathoadon.UseVisualStyleBackColor = true;
+            this.btn_Xuathoadon.Click += new System.EventHandler(this.btn_Xuathoadon_Click);
             // 
             // lb_
             // 

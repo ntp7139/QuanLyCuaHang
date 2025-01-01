@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System;
 using System.Windows.Forms;
 using System.Data;
+using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 
 namespace QuanLyCuaHang
 {
@@ -443,6 +444,46 @@ namespace QuanLyCuaHang
         public void GetContent()
         {
             // Lấy nội dung tin nhắn
+        }
+    }
+    public class ordersform
+    {
+        public int ID;
+        public string Product;
+        public int quantity;
+        public string   paymentMethod;
+         public string   customerName;
+        public string email;
+        public string address;
+        public string date;
+        public string phoneNumber;
+        public decimal Gia;
+        public string Delivery;
+        public ordersform(int ID)
+        {
+            this.ID = ID;
+            Connection connection = new Connection();
+            string query = $"select * from ordersform where id = '{ID}'";
+            DataTable dt = connection.ExcuteQuery(query);
+            DataRow dr = dt.Rows[0];
+            this.Product = dr["product"].ToString();
+            this.quantity = Convert.ToInt32(dr["quantity"].ToString());
+            this.paymentMethod = dr["paymentMethod"].ToString();
+            this.customerName = dr["customerName"].ToString();
+            this.email = dr["email"].ToString();
+            this.address = dr["address"].ToString();   
+            this.phoneNumber = dr["phoneNumber"].ToString();
+            DateTime ngay = DateTime.Now;
+            this.date = ngay.ToString();
+            string query1 = $"Select * from sanpham where tensanpham = '{Product}'";
+           dt = connection.ExcuteQuery(query1);
+            dr = dt.Rows[0];
+            string Gia_string = dr["gia"].ToString();
+            decimal Gia_sanpham = Convert.ToDecimal(Gia_string);
+            this.Gia = Gia_sanpham * this.quantity;
+            string[] value = { "FedEx", "DHL", "Việt Nam Post" };
+            Random random = new Random();
+            this.Delivery = value[random.Next(value.Length)];
         }
     }
 }
