@@ -268,13 +268,52 @@ namespace QuanLyCuaHang
     // Class Đơn hàng
     public class DonHang
     {
-        private int id;
+        private int id_donhang;
+        private int id_khachhang;
+        private int id_masanpham;
+        private int so_luong;
         private DateTime ngayDatHang;
-        private int idNguoiMua;
         private string trangThai;
+        private decimal Gia;
+        private string Hinhthucthanhtoan;
+        private string Donvivanchuyen;
 
+        public DonHang() { }
+        public DonHang(string id_khachhang,string id_masanpham,int so_luong,string trangthai,decimal Gia, string thanhtoan,string vanchuyen) 
+        {
+           // this.id_donhang = Convert.ToInt32(id_donhang);
+            this.id_khachhang = Convert.ToInt32(id_khachhang);
+            this.id_masanpham = Convert.ToInt32(id_masanpham);
+            this.so_luong = so_luong;
+            this.trangThai = trangthai;
+            this.Gia = Gia;
+            this.Hinhthucthanhtoan = thanhtoan;
+            this.Donvivanchuyen = vanchuyen;
+            DateTime ngayHienTai = DateTime.Now;
+            DateTime chiNgay = ngayHienTai.Date; // Lấy phần ngày, giờ sẽ là 00:00:00
+            string ngayDinhDang = chiNgay.ToString("yyyy-MM-dd");
+            this.ngayDatHang = ngayHienTai;
+
+        }
+        public void Load(string ID_Donhang)
+        {
+            Connection connection = new Connection();
+            string query = $"SELECT A.MaDonHang,A.MaKhachHang,B.MaSanPham,B.SoLuong,A.NgayDatHang,A.TrangThai,B.Gia,B.Hinhthucthanhtoan,B.Donvivanchuyen,A.Ngaydathang \r\nFROM donhang as A join chitietdonhang as B\r\non A.MaDonHang = B.MaDonHang where A.Madonhang = '{ID_Donhang}'";
+            DataTable dt = connection.ExcuteQuery(query);
+            DataRow dr = dt.Rows[0];
+            this.id_donhang = Convert.ToInt32(ID_Donhang);
+            this.id_khachhang = Convert.ToInt32(dr["A.Makhachhang"]);
+            this.id_masanpham = Convert.ToInt32(dr["A.MaSanPham"]);
+            this.so_luong = Convert.ToInt32(dr["B.SoLuong"]);
+            this.trangThai = dr["A.TrangThai"].ToString();
+            this.Gia = Convert.ToDecimal(dr["B.Gia"]);
+            this.Hinhthucthanhtoan = dr["B.Hinhthucthanhtoan"].ToString();
+            this.Donvivanchuyen = dr["B.Donvivanchuyen"].ToString();
+            this.ngayDatHang = (DateTime)dr["B.Ngaydathang"];
+        }
         public void Add()
         {
+            string query = "Insert into ";
             // Thêm đơn hàng mới
         }
 

@@ -30,6 +30,9 @@
         {
             this.DtgV_QLTT = new System.Windows.Forms.DataGridView();
             this.lb_1 = new System.Windows.Forms.Label();
+            this.btn_Delete_QLND = new System.Windows.Forms.Button();
+            this.btn_Edit_QLND = new System.Windows.Forms.Button();
+            this.btn_Add_QLND = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtgV_QLTT)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +55,44 @@
             this.lb_1.TabIndex = 10;
             this.lb_1.Text = "Thanh toán";
             // 
+            // btn_Delete_QLND
+            // 
+            this.btn_Delete_QLND.Enabled = false;
+            this.btn_Delete_QLND.Location = new System.Drawing.Point(512, 47);
+            this.btn_Delete_QLND.Name = "btn_Delete_QLND";
+            this.btn_Delete_QLND.Size = new System.Drawing.Size(88, 29);
+            this.btn_Delete_QLND.TabIndex = 14;
+            this.btn_Delete_QLND.Text = "Xóa";
+            this.btn_Delete_QLND.UseVisualStyleBackColor = true;
+            // 
+            // btn_Edit_QLND
+            // 
+            this.btn_Edit_QLND.Enabled = false;
+            this.btn_Edit_QLND.Location = new System.Drawing.Point(382, 47);
+            this.btn_Edit_QLND.Name = "btn_Edit_QLND";
+            this.btn_Edit_QLND.Size = new System.Drawing.Size(88, 29);
+            this.btn_Edit_QLND.TabIndex = 13;
+            this.btn_Edit_QLND.Text = "Sửa";
+            this.btn_Edit_QLND.UseVisualStyleBackColor = true;
+            // 
+            // btn_Add_QLND
+            // 
+            this.btn_Add_QLND.Enabled = false;
+            this.btn_Add_QLND.Location = new System.Drawing.Point(254, 47);
+            this.btn_Add_QLND.Name = "btn_Add_QLND";
+            this.btn_Add_QLND.Size = new System.Drawing.Size(88, 29);
+            this.btn_Add_QLND.TabIndex = 12;
+            this.btn_Add_QLND.Text = "Thêm";
+            this.btn_Add_QLND.UseVisualStyleBackColor = true;
+            // 
             // QuanLiThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 650);
+            this.Controls.Add(this.btn_Delete_QLND);
+            this.Controls.Add(this.btn_Edit_QLND);
+            this.Controls.Add(this.btn_Add_QLND);
             this.Controls.Add(this.DtgV_QLTT);
             this.Controls.Add(this.lb_1);
             this.Name = "QuanLiThanhToan";
@@ -73,5 +109,8 @@
 
         private System.Windows.Forms.DataGridView DtgV_QLTT;
         private System.Windows.Forms.Label lb_1;
+        private System.Windows.Forms.Button btn_Delete_QLND;
+        private System.Windows.Forms.Button btn_Edit_QLND;
+        private System.Windows.Forms.Button btn_Add_QLND;
     }
 }
