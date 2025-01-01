@@ -104,5 +104,13 @@ namespace QuanLyCuaHang
             form.ShowDialog();
             this.Show();
         }
+
+        private void quảnLíĐơnHàngTừFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Donhangtuform form = new Donhangtuform();
+            form.ShowDialog();
+            this.Show();    
+        }
     }
 }
