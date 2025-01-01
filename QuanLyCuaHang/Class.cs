@@ -268,24 +268,24 @@ namespace QuanLyCuaHang
     // Class Đơn hàng
     public class DonHang
     {
-        private int id_donhang;
-        private int id_khachhang;
-        private int id_masanpham;
-        private int so_luong;
-        private DateTime ngayDatHang;
-        private string trangThai;
-        private decimal Gia;
-        private string Hinhthucthanhtoan;
-        private string Donvivanchuyen;
-
+        public int id_donhang;
+        public int id_khachhang;
+        public int id_masanpham;
+        public int so_luong;
+        public DateTime ngayDatHang;
+        public string trangThai;
+        public decimal Gia;
+        public string Hinhthucthanhtoan;
+        public string Donvivanchuyen;
+        
         public DonHang() { }
-        public DonHang(string id_khachhang,string id_masanpham,int so_luong,string trangthai,decimal Gia, string thanhtoan,string vanchuyen) 
+        public DonHang(string id_khachhang,string id_masanpham,int so_luong,decimal Gia, string thanhtoan,string vanchuyen) 
         {
            // this.id_donhang = Convert.ToInt32(id_donhang);
             this.id_khachhang = Convert.ToInt32(id_khachhang);
             this.id_masanpham = Convert.ToInt32(id_masanpham);
             this.so_luong = so_luong;
-            this.trangThai = trangthai;
+            this.trangThai = "Đang xử lí";
             this.Gia = Gia;
             this.Hinhthucthanhtoan = thanhtoan;
             this.Donvivanchuyen = vanchuyen;
@@ -295,25 +295,33 @@ namespace QuanLyCuaHang
             this.ngayDatHang = ngayHienTai;
 
         }
+
         public void Load(string ID_Donhang)
         {
             Connection connection = new Connection();
-            string query = $"SELECT A.MaDonHang,A.MaKhachHang,B.MaSanPham,B.SoLuong,A.NgayDatHang,A.TrangThai,B.Gia,B.Hinhthucthanhtoan,B.Donvivanchuyen,A.Ngaydathang \r\nFROM donhang as A join chitietdonhang as B\r\non A.MaDonHang = B.MaDonHang where A.Madonhang = '{ID_Donhang}'";
+            string query = $"SELECT * from donhang where Madonhang = '{ID_Donhang}'";
             DataTable dt = connection.ExcuteQuery(query);
             DataRow dr = dt.Rows[0];
             this.id_donhang = Convert.ToInt32(ID_Donhang);
-            this.id_khachhang = Convert.ToInt32(dr["A.Makhachhang"]);
-            this.id_masanpham = Convert.ToInt32(dr["A.MaSanPham"]);
-            this.so_luong = Convert.ToInt32(dr["B.SoLuong"]);
-            this.trangThai = dr["A.TrangThai"].ToString();
-            this.Gia = Convert.ToDecimal(dr["B.Gia"]);
-            this.Hinhthucthanhtoan = dr["B.Hinhthucthanhtoan"].ToString();
-            this.Donvivanchuyen = dr["B.Donvivanchuyen"].ToString();
-            this.ngayDatHang = (DateTime)dr["B.Ngaydathang"];
+            this.id_khachhang = Convert.ToInt32(dr["Makhachhang"]);
+            this.id_masanpham = Convert.ToInt32(dr["MaSanPham"]);
+            this.so_luong = Convert.ToInt32(dr["SoLuong"]);
+            this.trangThai = dr["TrangThai"].ToString();
+            this.Gia = Convert.ToDecimal(dr["TongTien"]);
+            this.Hinhthucthanhtoan = dr["Hinhthucthanhtoan"].ToString();
+            this.Donvivanchuyen = dr["Donvivanchuyen"].ToString();
+            this.ngayDatHang = (DateTime)dr["Ngaydathang"];
         }
         public void Add()
         {
-            string query = "Insert into ";
+            DateTime ngayHienTai = DateTime.Now;
+            DateTime chiNgay = ngayHienTai.Date;
+            string ngay = chiNgay.ToString("yyyy-MM-dd");
+            string query = $"Insert into donhang(MaKhachHang,MaSanPham, SoLuong, HinhThucThanhToan, DonViVanChuyen, NgayDatHang, TongTien, TrangThai) " +
+                $" VALUES('{id_khachhang}','{id_masanpham}','{so_luong}','{Hinhthucthanhtoan}','{Donvivanchuyen}','{ngay}','{Gia}','{trangThai}')";
+            Connection connection = new Connection();
+            connection.ExcuteNonQuery(query);
+           
             // Thêm đơn hàng mới
         }
 

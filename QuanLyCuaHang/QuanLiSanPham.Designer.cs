@@ -466,6 +466,7 @@
             this.pn_xóa.Name = "pn_xóa";
             this.pn_xóa.Size = new System.Drawing.Size(356, 236);
             this.pn_xóa.TabIndex = 18;
+            this.pn_xóa.Visible = false;
             // 
             // btn_thoat_xoa
             // 
