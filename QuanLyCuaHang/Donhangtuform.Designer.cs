@@ -33,6 +33,7 @@
             this.btn_Xuathoadon = new System.Windows.Forms.Button();
             this.lb_ = new System.Windows.Forms.Label();
             this.tb_Madonhang = new System.Windows.Forms.TextBox();
+            this.btn_Laythongitn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_ordersform)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,11 +83,22 @@
             this.tb_Madonhang.Size = new System.Drawing.Size(182, 26);
             this.tb_Madonhang.TabIndex = 14;
             // 
+            // btn_Laythongitn
+            // 
+            this.btn_Laythongitn.Location = new System.Drawing.Point(796, 454);
+            this.btn_Laythongitn.Name = "btn_Laythongitn";
+            this.btn_Laythongitn.Size = new System.Drawing.Size(211, 102);
+            this.btn_Laythongitn.TabIndex = 15;
+            this.btn_Laythongitn.Text = "Lấy thông tin đơn";
+            this.btn_Laythongitn.UseVisualStyleBackColor = true;
+            this.btn_Laythongitn.Click += new System.EventHandler(this.btn_Laythongitn_Click);
+            // 
             // Donhangtuform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 646);
+            this.Controls.Add(this.btn_Laythongitn);
             this.Controls.Add(this.tb_Madonhang);
             this.Controls.Add(this.lb_);
             this.Controls.Add(this.btn_Xuathoadon);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.Button btn_Xuathoadon;
         private System.Windows.Forms.Label lb_;
         private System.Windows.Forms.TextBox tb_Madonhang;
+        private System.Windows.Forms.Button btn_Laythongitn;
     }
 }

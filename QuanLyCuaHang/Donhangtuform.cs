@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SqlClient;
 namespace QuanLyCuaHang
 {
     public partial class Donhangtuform : Form
@@ -168,5 +169,27 @@ namespace QuanLyCuaHang
             return new Paragraph(run);
         }
 
+        private void btn_Laythongitn_Click(object sender, EventArgs e)
+        {
+            RunSSISPackage();
+        }
+        private void RunSSISPackage()
+        {
+            // Kết nối đến SQL Server
+            using (SqlConnection connection = new SqlConnection("YourConnectionString"))
+            {
+                connection.Open();
+
+                // Tạo Command để gọi Stored Procedure
+                using (SqlCommand command = new SqlCommand("EXEC [SSISDB].[catalog].[start_execution] @execution_id", connection))
+                {
+                    // Thêm các tham số nếu cần
+                    //command.Parameters.AddWithValue("@execution_id", your_execution_id);
+
+                    // Thực thi Stored Procedure
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }
