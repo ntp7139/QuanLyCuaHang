@@ -9,46 +9,50 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Math.Field;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 namespace QuanLyCuaHang
 {
-    internal class Connection 
+    internal class Connection
     {
-        //Connection tới  server 
-        private string connection =  "server=127.0.0.1;port = 3306;uid=root;pwd=phatbaoan112;database=facebooksalesmanagement";
-        //Kết nối tới MySQL sever
-        public MySqlConnection MySqlConnection(string connect)
+        // Connection tới SQL Server
+        private string connection = "Server=DESKTOP-HH7KDOL\\SQLEXPRESS; Database=PTTKHT; Trusted_Connection=True;";
+
+        // Kết nối tới SQL Server
+        public SqlConnection SqlConnection(string connect)
         {
-            MySqlConnection conn = new MySqlConnection(connect);
+            SqlConnection conn = new SqlConnection(connect);
             return conn;
         }
-        // Thực hiện truy vấn tra về select
+
+        // Thực hiện truy vấn trả về select
         public DataTable ExcuteQuery(string query)
         {
             DataTable dt = new DataTable();
-            MySqlConnection Connect = MySqlConnection(connection);
+            SqlConnection Connect = SqlConnection(connection);
             try
             {
                 Connect.Open();
-                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query,Connect))
-                { 
+                using (SqlDataAdapter adapter = new SqlDataAdapter(query, Connect))
+                {
                     adapter.Fill(dt);
-
                 }
                 Connect.Close();
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             return dt;
         }
+
         // Thực hiện các câu lệnh non-Query (Insert, Update, Delete)
         public void ExcuteNonQuery(string nonquery)
         {
-            MySqlConnection Connect = MySqlConnection(connection);
+            SqlConnection Connect = SqlConnection(connection);
             try
             {
                 Connect.Open();
-                using (MySqlCommand command = new MySqlCommand(nonquery, Connect))
+                using (SqlCommand command = new SqlCommand(nonquery, Connect))
                 {
                     command.ExecuteNonQuery();
                 }
@@ -59,16 +63,17 @@ namespace QuanLyCuaHang
                 MessageBox.Show(ex.Message);
             }
         }
+
         // Thực hiện truy vấn xem có cột hay không
-        public bool Check_Query(string query) 
+        public bool Check_Query(string query)
         {
-            bool check =false;
-            MySqlConnection Connect = MySqlConnection(connection);
+            bool check = false;
+            SqlConnection Connect = SqlConnection(connection);
             try
             {
                 Connect.Open();
-                MySqlCommand command = new MySqlCommand(query, Connect);
-                using (MySqlDataReader read = command.ExecuteReader())
+                SqlCommand command = new SqlCommand(query, Connect);
+                using (SqlDataReader read = command.ExecuteReader())
                 {
                     if (read.HasRows)
                     {
@@ -77,21 +82,22 @@ namespace QuanLyCuaHang
                     else check = false;
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             return check;
         }
-        // Thực hiện trả về duy nhất 1 giá trị ( Count, Max)
+
+        // Thực hiện trả về duy nhất 1 giá trị (Count, Max)
         public int ExcuteScalar(string query)
         {
             int result = 0;
-            MySqlConnection Connect = MySqlConnection(connection);
+            SqlConnection Connect = SqlConnection(connection);
             try
             {
                 Connect.Open();
-                MySqlCommand cmd = new MySqlCommand(query, Connect);
+                SqlCommand cmd = new SqlCommand(query, Connect);
                 if (!(cmd.ExecuteScalar() == null))
                 {
                     object count_row = cmd.ExecuteScalar();
@@ -105,29 +111,26 @@ namespace QuanLyCuaHang
             }
             return result;
         }
+
         public bool Check_ID_Sellers(string ID)
         {
-            
-            string query  = $"select * from nguoiban where manguoiban = '{ID}'";
+            string query = $"SELECT * FROM nguoiban WHERE manguoiban = '{ID}'";
             bool Check = Check_Query(query);
             return Check;
-
         }
-        public bool Check_Sellers(string ID,string matkhau)
+
+        public bool Check_Sellers(string ID, string matkhau)
         {
-
-            string query = $"select * from nguoiban where manguoiban = '{ID}' and matkhau ='{matkhau}'";
+            string query = $"SELECT * FROM nguoiban WHERE manguoiban = '{ID}' AND matkhau = '{matkhau}'";
             bool Check = Check_Query(query);
             return Check;
-
         }
+
         public bool Check_ID_SanPham(string ID)
         {
-
-            string query = $"select * from sanpham where masanpham = '{ID}'";
+            string query = $"SELECT * FROM sanpham WHERE masanpham = '{ID}'";
             bool Check = Check_Query(query);
             return Check;
-
         }
 
 

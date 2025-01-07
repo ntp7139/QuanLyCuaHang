@@ -40,7 +40,7 @@
             // dtgv_ordersform
             // 
             this.dtgv_ordersform.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_ordersform.Location = new System.Drawing.Point(58, 105);
+            this.dtgv_ordersform.Location = new System.Drawing.Point(36, 138);
             this.dtgv_ordersform.Name = "dtgv_ordersform";
             this.dtgv_ordersform.RowHeadersWidth = 62;
             this.dtgv_ordersform.RowTemplate.Height = 25;
@@ -58,7 +58,7 @@
             // 
             // btn_Xuathoadon
             // 
-            this.btn_Xuathoadon.Location = new System.Drawing.Point(796, 322);
+            this.btn_Xuathoadon.Location = new System.Drawing.Point(796, 324);
             this.btn_Xuathoadon.Name = "btn_Xuathoadon";
             this.btn_Xuathoadon.Size = new System.Drawing.Size(211, 89);
             this.btn_Xuathoadon.TabIndex = 12;
@@ -69,7 +69,7 @@
             // lb_
             // 
             this.lb_.AutoSize = true;
-            this.lb_.Location = new System.Drawing.Point(751, 179);
+            this.lb_.Location = new System.Drawing.Point(719, 230);
             this.lb_.Name = "lb_";
             this.lb_.Size = new System.Drawing.Size(102, 20);
             this.lb_.TabIndex = 13;
@@ -78,14 +78,14 @@
             // 
             // tb_Madonhang
             // 
-            this.tb_Madonhang.Location = new System.Drawing.Point(915, 173);
+            this.tb_Madonhang.Location = new System.Drawing.Point(883, 224);
             this.tb_Madonhang.Name = "tb_Madonhang";
             this.tb_Madonhang.Size = new System.Drawing.Size(182, 26);
             this.tb_Madonhang.TabIndex = 14;
             // 
             // btn_Laythongitn
             // 
-            this.btn_Laythongitn.Location = new System.Drawing.Point(796, 454);
+            this.btn_Laythongitn.Location = new System.Drawing.Point(248, 14);
             this.btn_Laythongitn.Name = "btn_Laythongitn";
             this.btn_Laythongitn.Size = new System.Drawing.Size(211, 102);
             this.btn_Laythongitn.TabIndex = 15;

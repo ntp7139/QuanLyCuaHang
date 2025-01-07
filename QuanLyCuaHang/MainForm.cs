@@ -45,7 +45,7 @@ namespace QuanLyCuaHang
             else {
 
                 btn_QuanLiNguoiDung.Visible = true;
-                btn_QuanliCuahang.Visible = false;
+                btn_QuanliCuahang.Visible = true;
             }
                     
         }
