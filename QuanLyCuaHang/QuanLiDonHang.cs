@@ -142,7 +142,13 @@ namespace QuanLyCuaHang
             }
             else
             {
-                CreateInvoiceWord(donhang); 
+                if (CreateInvoiceWord(donhang))
+                {
+                    donhang.trangThai = "Chờ xác nhận! ";
+                    donhang.Update();
+                    QuanLiDonHang_Load(sender, e);
+                }
+
             }
         }
         //render cái form thành bitmap
@@ -160,8 +166,9 @@ namespace QuanLyCuaHang
 
             return bitmap;
         }
-        private void CreateInvoiceWord(DonHang hoaDon)
+        private bool CreateInvoiceWord(DonHang hoaDon)
         {
+            bool Ans = false;
             // Đường dẫn lưu file Word
             string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"HoaDon_{hoaDon.id_donhang}.docx");
 
@@ -224,7 +231,10 @@ namespace QuanLyCuaHang
             }
 
             // Thông báo hoàn thành
+            
             MessageBox.Show($"Hóa đơn đã được xuất ra file Word tại: {filePath}", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Ans = true;
+            return Ans;
         }
 
         // Hàm tạo hàng trong bảng với văn bản hiển thị trên một dòng

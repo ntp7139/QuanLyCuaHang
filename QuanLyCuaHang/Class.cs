@@ -329,6 +329,18 @@ namespace QuanLyCuaHang
         public void Update()
         {
             // Cập nhật thông tin đơn hàng
+               string query = $"UPDATE donhang " +
+                    $"SET MaKhachHang = '{id_khachhang}', " +
+                    $"MaSanPham = '{id_masanpham}', " +
+                    $"SoLuong = '{so_luong}', " +
+                    $"HinhThucThanhToan = '{Hinhthucthanhtoan}', " +
+                    $"DonViVanChuyen = '{Donvivanchuyen}', " +
+                    $"NgayDatHang = '{ngayDatHang.ToString("yyyy-MM-dd")}', " +
+                    $"TongTien = '{Gia}', " +
+                    $"TrangThai = '{trangThai}' " +
+                    $"WHERE MaDonHang = {id_donhang};";
+            Connection connection = new Connection();
+            connection.ExcuteNonQuery(query);
         }
 
         public void GetStatus()
