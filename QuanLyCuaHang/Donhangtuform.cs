@@ -176,7 +176,7 @@ namespace QuanLyCuaHang
         private void RunSSISPackage()
         {
             // Kết nối đến SQL Server
-            using (SqlConnection connection = new SqlConnection("YourConnectionString"))
+            using (SqlConnection connection = new SqlConnection("Server=DESKTOP-HH7KDOL\\SQLEXPRESS; Database=PTTKHT; Trusted_Connection=True;"))
             {
                 connection.Open();
 
