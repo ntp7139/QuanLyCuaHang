@@ -46,9 +46,10 @@
             // lb_1
             // 
             this.lb_1.AutoSize = true;
+            this.lb_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_1.Location = new System.Drawing.Point(80, 47);
             this.lb_1.Name = "lb_1";
-            this.lb_1.Size = new System.Drawing.Size(71, 20);
+            this.lb_1.Size = new System.Drawing.Size(152, 37);
             this.lb_1.TabIndex = 10;
             this.lb_1.Text = "Phản hồi";
             // 
@@ -56,6 +57,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyCuaHang.Properties.Resources.ảnh_nền;
             this.ClientSize = new System.Drawing.Size(1081, 650);
             this.Controls.Add(this.DtgV_QLPH);
             this.Controls.Add(this.lb_1);

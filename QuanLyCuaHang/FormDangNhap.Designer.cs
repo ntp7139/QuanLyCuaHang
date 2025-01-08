@@ -50,8 +50,8 @@ namespace QuanLyCuaHang
             this.lbPassword = new System.Windows.Forms.Label();
             this.lbAccount = new System.Windows.Forms.Label();
             this.tB_TaiKhoan = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tCt_FormDangNhap = new System.Windows.Forms.TabControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pn_DangNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -220,15 +220,6 @@ namespace QuanLyCuaHang
             this.tB_TaiKhoan.Size = new System.Drawing.Size(334, 26);
             this.tB_TaiKhoan.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(1, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
             // tCt_FormDangNhap
             // 
             this.tCt_FormDangNhap.Location = new System.Drawing.Point(0, 0);
@@ -237,11 +228,22 @@ namespace QuanLyCuaHang
             this.tCt_FormDangNhap.Size = new System.Drawing.Size(800, 500);
             this.tCt_FormDangNhap.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QuanLyCuaHang.Properties.Resources.Shop;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(500, 500);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
+
             this.ClientSize = new System.Drawing.Size(900, 500);
             this.Controls.Add(this.pn_DangNhap);
             this.Margin = new System.Windows.Forms.Padding(2);

@@ -31,6 +31,7 @@
             this.DtgV_QLDH = new System.Windows.Forms.DataGridView();
             this.lb_1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_xuathoadon = new System.Windows.Forms.Button();
             this.btn_Xóa = new System.Windows.Forms.Button();
             this.lb_donvivanchuyen = new System.Windows.Forms.ListBox();
             this.lB_hinhthucthanhtoan = new System.Windows.Forms.ListBox();
@@ -50,7 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_title = new System.Windows.Forms.Label();
-            this.btn_xuathoadon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DtgV_QLDH)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,15 +69,18 @@
             // lb_1
             // 
             this.lb_1.AutoSize = true;
-            this.lb_1.Location = new System.Drawing.Point(58, 47);
+            this.lb_1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lb_1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_1.Location = new System.Drawing.Point(41, 42);
             this.lb_1.Name = "lb_1";
-            this.lb_1.Size = new System.Drawing.Size(79, 20);
+            this.lb_1.Size = new System.Drawing.Size(167, 45);
             this.lb_1.TabIndex = 8;
             this.lb_1.Text = "Đơn hàng";
             this.lb_1.Click += new System.EventHandler(this.lb_1_Click);
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::QuanLyCuaHang.Properties.Resources.xanhlam;
             this.panel1.Controls.Add(this.btn_xuathoadon);
             this.panel1.Controls.Add(this.btn_Xóa);
             this.panel1.Controls.Add(this.lb_donvivanchuyen);
@@ -102,6 +105,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(328, 571);
             this.panel1.TabIndex = 10;
+            // 
+            // btn_xuathoadon
+            // 
+            this.btn_xuathoadon.Location = new System.Drawing.Point(71, 507);
+            this.btn_xuathoadon.Name = "btn_xuathoadon";
+            this.btn_xuathoadon.Size = new System.Drawing.Size(181, 50);
+            this.btn_xuathoadon.TabIndex = 20;
+            this.btn_xuathoadon.Text = "Xuất hóa đơn";
+            this.btn_xuathoadon.UseVisualStyleBackColor = true;
+            this.btn_xuathoadon.Click += new System.EventHandler(this.btn_xuathoadon_Click);
             // 
             // btn_Xóa
             // 
@@ -277,20 +290,11 @@
             this.lb_title.TabIndex = 0;
             this.lb_title.Text = "Thêm đơn hàng";
             // 
-            // btn_xuathoadon
-            // 
-            this.btn_xuathoadon.Location = new System.Drawing.Point(71, 507);
-            this.btn_xuathoadon.Name = "btn_xuathoadon";
-            this.btn_xuathoadon.Size = new System.Drawing.Size(181, 50);
-            this.btn_xuathoadon.TabIndex = 20;
-            this.btn_xuathoadon.Text = "Xuất hóa đơn";
-            this.btn_xuathoadon.UseVisualStyleBackColor = true;
-            this.btn_xuathoadon.Click += new System.EventHandler(this.btn_xuathoadon_Click);
-            // 
             // QuanLiDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyCuaHang.Properties.Resources.ảnh_nền;
             this.ClientSize = new System.Drawing.Size(1081, 650);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.DtgV_QLDH);
@@ -310,7 +314,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DtgV_QLDH;
-        private System.Windows.Forms.Label lb_1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -332,5 +335,6 @@
         private System.Windows.Forms.ListBox lb_donvivanchuyen;
         private System.Windows.Forms.Button btn_Xóa;
         private System.Windows.Forms.Button btn_xuathoadon;
+        private System.Windows.Forms.Label lb_1;
     }
 }

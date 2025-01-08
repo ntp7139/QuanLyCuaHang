@@ -35,6 +35,7 @@
             this.btn_Add_QLND = new System.Windows.Forms.Button();
             this.pn_Chucnang = new System.Windows.Forms.Panel();
             this.btn_Thoat_Sua = new System.Windows.Forms.Button();
+            this.btn_Chucnang = new System.Windows.Forms.Button();
             this.tb_ngaythamgia = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tb_diachi = new System.Windows.Forms.TextBox();
@@ -49,9 +50,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tb_Manguoiban = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.btn_Chucnang = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DtgV_QLND)).BeginInit();
             this.pn_Chucnang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Delete_QLND
@@ -87,7 +89,7 @@
             // lb_1
             // 
             this.lb_1.AutoSize = true;
-            this.lb_1.Location = new System.Drawing.Point(30, 53);
+            this.lb_1.Location = new System.Drawing.Point(33, 57);
             this.lb_1.Name = "lb_1";
             this.lb_1.Size = new System.Drawing.Size(158, 20);
             this.lb_1.TabIndex = 6;
@@ -105,6 +107,7 @@
             // 
             // pn_Chucnang
             // 
+            this.pn_Chucnang.BackgroundImage = global::QuanLyCuaHang.Properties.Resources.xanhlam;
             this.pn_Chucnang.Controls.Add(this.btn_Thoat_Sua);
             this.pn_Chucnang.Controls.Add(this.btn_Chucnang);
             this.pn_Chucnang.Controls.Add(this.tb_ngaythamgia);
@@ -136,6 +139,16 @@
             this.btn_Thoat_Sua.Text = "Thoát";
             this.btn_Thoat_Sua.UseVisualStyleBackColor = true;
             this.btn_Thoat_Sua.Click += new System.EventHandler(this.btn_Thoat_Sua_Click);
+            // 
+            // btn_Chucnang
+            // 
+            this.btn_Chucnang.Location = new System.Drawing.Point(41, 377);
+            this.btn_Chucnang.Name = "btn_Chucnang";
+            this.btn_Chucnang.Size = new System.Drawing.Size(109, 44);
+            this.btn_Chucnang.TabIndex = 16;
+            this.btn_Chucnang.Text = "Sửa";
+            this.btn_Chucnang.UseVisualStyleBackColor = true;
+            this.btn_Chucnang.Click += new System.EventHandler(this.btn_Chucnang_Click);
             // 
             // tb_ngaythamgia
             // 
@@ -251,20 +264,24 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Mã người bán";
             // 
-            // btn_Chucnang
+            // pictureBox1
             // 
-            this.btn_Chucnang.Location = new System.Drawing.Point(41, 377);
-            this.btn_Chucnang.Name = "btn_Chucnang";
-            this.btn_Chucnang.Size = new System.Drawing.Size(109, 44);
-            this.btn_Chucnang.TabIndex = 16;
-            this.btn_Chucnang.Text = "Sửa";
-            this.btn_Chucnang.UseVisualStyleBackColor = true;
-            this.btn_Chucnang.Click += new System.EventHandler(this.btn_Chucnang_Click);
+            this.pictureBox1.BackgroundImage = global::QuanLyCuaHang.Properties.Resources.xanhlam;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(591, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // QuanLiNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyCuaHang.Properties.Resources.ảnh_nền;
             this.ClientSize = new System.Drawing.Size(1081, 650);
             this.Controls.Add(this.pn_Chucnang);
             this.Controls.Add(this.btn_Delete_QLND);
@@ -272,6 +289,7 @@
             this.Controls.Add(this.DtgV_QLND);
             this.Controls.Add(this.lb_1);
             this.Controls.Add(this.btn_Add_QLND);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "QuanLiNguoiDung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLiNguoiDung";
@@ -279,6 +297,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DtgV_QLND)).EndInit();
             this.pn_Chucnang.ResumeLayout(false);
             this.pn_Chucnang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,5 +327,6 @@
         private System.Windows.Forms.TextBox tb_Manguoiban;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btn_Chucnang;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -285,6 +285,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QuanLiDonHang.resx">
       <DependentUpon>QuanLiDonHang.cs</DependentUpon>
@@ -320,6 +321,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quanao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quanaoshop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhnen.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopppp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh nền.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xanhlam.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

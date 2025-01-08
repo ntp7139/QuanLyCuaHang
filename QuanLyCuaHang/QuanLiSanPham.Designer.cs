@@ -72,10 +72,12 @@
             this.btn_xoa = new System.Windows.Forms.Button();
             this.tB_masanpham_xoa = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DtgV_QLSP)).BeginInit();
             this.pn_Them.SuspendLayout();
             this.pn_Sua.SuspendLayout();
             this.pn_xóa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Delete_QLND
@@ -111,7 +113,7 @@
             // lb_1
             // 
             this.lb_1.AutoSize = true;
-            this.lb_1.Location = new System.Drawing.Point(41, 35);
+            this.lb_1.Location = new System.Drawing.Point(43, 39);
             this.lb_1.Name = "lb_1";
             this.lb_1.Size = new System.Drawing.Size(149, 20);
             this.lb_1.TabIndex = 11;
@@ -129,6 +131,7 @@
             // 
             // pn_Them
             // 
+            this.pn_Them.BackgroundImage = global::QuanLyCuaHang.Properties.Resources.xanhlam;
             this.pn_Them.Controls.Add(this.btn_Thoat_Them);
             this.pn_Them.Controls.Add(this.btn_Them);
             this.pn_Them.Controls.Add(this.tB_LinkAnh_Them);
@@ -287,6 +290,7 @@
             // 
             // pn_Sua
             // 
+            this.pn_Sua.BackgroundImage = global::QuanLyCuaHang.Properties.Resources.xanhlam;
             this.pn_Sua.Controls.Add(this.btn_Thoat_Sua);
             this.pn_Sua.Controls.Add(this.btn_Sua);
             this.pn_Sua.Controls.Add(this.tb_linkanh_sua);
@@ -458,6 +462,7 @@
             // 
             // pn_xóa
             // 
+            this.pn_xóa.BackgroundImage = global::QuanLyCuaHang.Properties.Resources.xanhlam;
             this.pn_xóa.Controls.Add(this.btn_thoat_xoa);
             this.pn_xóa.Controls.Add(this.btn_xoa);
             this.pn_xóa.Controls.Add(this.tB_masanpham_xoa);
@@ -504,10 +509,20 @@
             this.label14.TabIndex = 2;
             this.label14.Text = "Mã Sản Phẩm:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::QuanLyCuaHang.Properties.Resources.xanhlam;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(597, 67);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
             // QuanLiSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyCuaHang.Properties.Resources.ảnh_nền;
             this.ClientSize = new System.Drawing.Size(1081, 650);
             this.Controls.Add(this.pn_Sua);
             this.Controls.Add(this.pn_xóa);
@@ -517,6 +532,7 @@
             this.Controls.Add(this.DtgV_QLSP);
             this.Controls.Add(this.lb_1);
             this.Controls.Add(this.btn_Add_QLND);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "QuanLiSanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -528,6 +544,7 @@
             this.pn_Sua.PerformLayout();
             this.pn_xóa.ResumeLayout(false);
             this.pn_xóa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -579,5 +596,6 @@
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.TextBox tB_masanpham_xoa;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
