@@ -40,6 +40,7 @@ namespace QuanLyCuaHang
             int ID_donhang = Convert.ToInt32(tb_Madonhang.Text);
             ordersform orders = new ordersform(ID_donhang);
             CreateInvoiceWord(orders);
+            orders.Update();
         }
         private Bitmap CaptureFormToBitmap()
         {
@@ -171,25 +172,8 @@ namespace QuanLyCuaHang
 
         private void btn_Laythongitn_Click(object sender, EventArgs e)
         {
-            RunSSISPackage();
+            Load_1(sender,e);
         }
-        private void RunSSISPackage()
-        {
-            // Kết nối đến SQL Server
-            using (SqlConnection connection = new SqlConnection("Server=DESKTOP-HH7KDOL\\SQLEXPRESS; Database=PTTKHT; Trusted_Connection=True;"))
-            {
-                connection.Open();
-
-                // Tạo Command để gọi Stored Procedure
-                using (SqlCommand command = new SqlCommand("EXEC [SSISDB].[catalog].[start_execution] @execution_id", connection))
-                {
-                    // Thêm các tham số nếu cần
-                    //command.Parameters.AddWithValue("@execution_id", your_execution_id);
-
-                    // Thực thi Stored Procedure
-                    command.ExecuteNonQuery();
-                }
-            }
-        }
+    
     }
 }

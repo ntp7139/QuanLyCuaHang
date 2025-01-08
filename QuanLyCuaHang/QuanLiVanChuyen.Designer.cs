@@ -89,6 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyCuaHang.Properties.Resources.ảnh_nền;
             this.ClientSize = new System.Drawing.Size(1081, 650);
             this.Controls.Add(this.btn_Delete_QLND);
             this.Controls.Add(this.btn_Edit_QLND);

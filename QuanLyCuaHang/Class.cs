@@ -471,6 +471,7 @@ namespace QuanLyCuaHang
         public string phoneNumber;
         public decimal Gia;
         public string Delivery;
+        public string TinhTrang;
         public ordersform(int ID)
         {
             this.ID = ID;
@@ -485,6 +486,7 @@ namespace QuanLyCuaHang
             this.email = dr["email"].ToString();
             this.address = dr["address"].ToString();   
             this.phoneNumber = dr["phoneNumber"].ToString();
+            this.TinhTrang = dr["trangthai"].ToString();
             DateTime ngay = DateTime.Now;
             this.date = ngay.ToString();
             string query1 = $"Select * from sanpham where tensanpham = '{Product}'";
@@ -496,6 +498,13 @@ namespace QuanLyCuaHang
             string[] value = { "FedEx", "DHL", "Việt Nam Post" };
             Random random = new Random();
             this.Delivery = value[random.Next(value.Length)];
+            
+        }
+        public void Update()
+        {
+            Connection connection = new Connection();
+            string query = $"Update ordersform set trangthai = 'Đã xác nhận ' where id = '{this.ID}';";
+            connection.ExcuteNonQuery(query);
         }
     }
 }
